@@ -1,0 +1,14 @@
+# TestDialog kurz
+# Version 1.0.0
+# Datum 15.09.2018
+
+DIALOG main
+
+	STATE home
+		SPEAK 4, Hallo! Ich steuere das Tablet.
+		ACTION animate, Button, index
+		SPEAK 5, Hier wird ein Schalter animiert.
+
+	STATE nextState
+		ACTION animate, Button, index2
+		SPEAK 7, Hier wird ein anderer Schalter animiert.

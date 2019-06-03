@@ -1,0 +1,66 @@
+/*
+ * CSS-Classes for animation in AnimateDirective
+ */
+
+
+$animate-focus: rgb(250, 195, 28);
+$animate-focus-border: darken($animate-focus, 10);
+$time: 1s;
+$count: 5;
+$scroll-count: 10;
+$foreground:rgb(18, 20, 18);
+
+
+/* animation functions */
+
+@mixin blinkTransform($initialColor, $blinkColor) {
+    animation: blinkNowTransform $time;
+    animation-iteration-count: $count;
+
+    @keyframes blinkNowTransform {
+        50% {
+            transform: scaleY(1.2) scaleX(1.2);
+            background-color: $blinkColor;
+        }
+    }
+}
+
+@mixin blinkWithBorder($initialColor, $blinkColor, $borderColor) {
+    animation: blinkNowBorder $time;
+    animation-iteration-count: $count;
+
+    i[class*="icon icon-*"] {
+        color: $foreground;
+    }
+
+    @keyframes blinkNowBorder {
+        50% {
+            transform: scaleY(1.2) scaleX(1.2);
+            background-color: $blinkColor;
+            border-color: $borderColor;
+        }
+    }
+}
+
+/* no Transformation */
+
+@mixin blink($initialColor, $blinkColor) {
+  animation: blinkNow $time;
+  animation-iteration-count: $count;
+
+  @keyframes blinkNow {
+      50% {
+          background-color: $blinkColor;
+      }
+  }
+}
+
+
+/* Animate-Classes for Buttons*/
+
+.animate-focus-button button {
+    @include blinkWithBorder($foreground, $animate-focus, $animate-focus-border);
+}
+
+
+

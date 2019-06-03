@@ -1,0 +1,13 @@
+{
+    "name": "speech-react-app",
+    "displayName": "SpeechReactApp",
+    "version": "0.5.10",
+    "description": "Test-App fuer Speech-React SDK",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "LinguaLogic Team",
+    "license": "MIT",
+    "dependencies": {}
+}

@@ -6,6 +6,8 @@ Hier werden die in Speech-React integrierten Cloud-Dienste aufgelistet:
 
 * **[GoogleModule](./google/Google.md):** erlaubt die Nutzung von Google-NLU (Dialogflow Version 1)
 
+* **[MicrosoftModule](./microsoft/Microsoft.md):** erlaubt die Nutzung von Microsoft-ASR
+
 
 
 

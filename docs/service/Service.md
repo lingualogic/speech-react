@@ -38,6 +38,8 @@ Folgende Basis-Services gibt es:
 
 * **[GoogleService](./google/GoogleService.md):** erlaubt die Änderung der Google-Credentials
 
+* **[MicrosoftService](./microsoft/MicrosoftService.md):** erlaubt die Änderung der Microsoft-Credentials
+
 
 Folgende Module gibt es:
 
@@ -45,4 +47,6 @@ Folgende Module gibt es:
 * **[AmazonModule](./../cloud/amazon/Amazon.md):** verwaltet die Amazon Cloud-Dienstanbindung
 
 * **[GoogleModule](./../cloud/google/Google.md):** verwaltet die Google Cloud-Dienstanbindung
+
+* **[MicrosoftModule](./../cloud/microsoft/Microsoft.md):** verwaltet die Microsoft Cloud-Dienstanbindung
 

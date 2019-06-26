@@ -58,6 +58,8 @@ module.exports = ({ gulp, docsDir, bundleDir, srcSpeechDir, buildDir, buildSpeec
             .pipe( replace( '"./amazon/amazon-service"', '"./speech-react"'))
             .pipe( replace( '"./google/google-module"', '"./speech-react"'))
             .pipe( replace( '"./google/google-service"', '"./speech-react"'))
+            .pipe( replace( '"./microsoft/microsoft-module"', '"./speech-react"'))
+            .pipe( replace( '"./microsoft/microsoft-service"', '"./speech-react"'))
             .pipe( replace( '"./base/base-service"', '"./speech-react"'))
             .pipe( replace( '"./speak/speak-service-const"', '"./speech-react"'))
             .pipe( replace( '"./speak/speak-service"', '"./speech-react"'))
@@ -125,6 +127,21 @@ module.exports = ({ gulp, docsDir, bundleDir, srcSpeechDir, buildDir, buildSpeec
             `${buildSpeechDir}/google/google-service.d.ts`,
         ])
         .pipe( gulp.dest( `${distDir}/google` ));
+    });
+
+
+    /**
+     * Kopiert die Sourcedateien aus build/src nach dist/src/ von MicrosoftModule
+     */
+
+    gulp.task('dist-copy-microsoft-module', function() {
+        return gulp.src([
+            `${buildSpeechDir}/microsoft/microsoft-module-config.interface.d.ts`,
+            `${buildSpeechDir}/microsoft/microsoft-module-option.interface.d.ts`,
+            `${buildSpeechDir}/microsoft/microsoft-module.d.ts`,
+            `${buildSpeechDir}/microsoft/microsoft-service.d.ts`,
+        ])
+        .pipe( gulp.dest( `${distDir}/microsoft` ));
     });
 
 
@@ -270,6 +287,7 @@ module.exports = ({ gulp, docsDir, bundleDir, srcSpeechDir, buildDir, buildSpeec
             'dist-copy-service',
             'dist-copy-amazon-module',
             'dist-copy-google-module',
+            'dist-copy-microsoft-module',
             'dist-copy-base-service',
             'dist-copy-speak-service',
             'dist-copy-listen-service',

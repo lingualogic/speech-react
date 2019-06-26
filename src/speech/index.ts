@@ -25,6 +25,14 @@ export * from './google/google-module';
 export * from './google/google-service';
 
 
+// microsoft-modul
+
+export * from './microsoft/microsoft-module-config.interface';
+export * from './microsoft/microsoft-module-option.interface';
+export * from './microsoft/microsoft-module';
+export * from './microsoft/microsoft-service';
+
+
 // base-service
 
 export * from './base/base-service-option.interface';

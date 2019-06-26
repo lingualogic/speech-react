@@ -6,15 +6,21 @@ Die Roadmap zeigt die Reihenfolge der Veröffentlichung von Speech-React Version
 ## Geplante Versionen
 
 
-### Juli: Version 0.5.11
+### Juli: Version 0.5.12
 
 beinhaltet:
 
-* **Google:** Integration des Google Cloud-Dienstes für eine ASR und TTS
-* **Server:** Integration des Speech-Servers für die Google Cloud-Dienste
+* **Microsoft:** Integration des Microsoft Cloud-Dienstes für eine TTS
 
 
 ## Veröffentlichte Versionen
+
+
+### Juni: Version 0.5.11
+
+beinhaltet:
+
+* **Microsoft:** Integration des Microsoft Cloud-Dienstes für eine ASR
 
 
 ### Juni: Version 0.5.10

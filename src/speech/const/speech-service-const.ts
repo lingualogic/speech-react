@@ -1,8 +1,8 @@
 /**
  * SpeechAngular Konstanten
  *
- * API-Version: 1.1
- * Datum:       24.05.2019
+ * API-Version: 1.2
+ * Datum:       20.06.2019
  *
  * @module speech
  * @author SB
@@ -21,4 +21,5 @@ export const SPEECH_DIALOG_SERVICE = 'DialogService';
 export const SPEECH_GOOGLE_SERVICE = 'GoogleService';
 export const SPEECH_INTENT_SERVICE = 'IntentService';
 export const SPEECH_LISTEN_SERVICE = 'ListenService';
+export const SPEECH_MICROSOFT_SERVICE = 'MicrosoftService';
 export const SPEECH_SPEAK_SERVICE = 'SpeakService';

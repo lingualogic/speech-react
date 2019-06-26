@@ -82,6 +82,31 @@ module.exports = ({ gulp, credentialsDir }) => {
 
 
     /**
+     * Erzeugt microsoft-credentials.ts in credentials/
+     */
+
+    gulp.task('install-microsoft-credentials', function() {
+        try {
+            // pruefen auf vorhandene Microsoft-Credentials Datei
+            fs.accessSync( `${credentialsDir}/microsoft-credentials.ts` );
+        } catch (e) {
+            // Datei ist nicht vorhanden und kann erzeugt werden
+            return gulp.src([ `${credentialsDir}/microsoft-credentials.ts` ])
+                .pipe( file( 'microsoft-credentials.ts', ''))
+                .pipe(inject.append( "/**\n" ))
+                .pipe(inject.append( " * Microsoft Credentials\n" ))
+                .pipe(inject.append( " */\n" ))
+                .pipe(inject.append( "\n" ))
+                .pipe(inject.append( "\n" ))
+                .pipe(inject.append( "export const MICROSOFT_REGION = '';\n" ))
+                .pipe(inject.append( "export const MICROSOFT_SUBSCRIPTION_KEY = '';\n" ))
+                .pipe( gulp.dest(  credentialsDir ));
+        }
+        return gulp.src( '' ); // empty stream
+    });
+
+
+    /**
      * Installiert die WebDriver-Treiber fuer die  Protractor-Tests
      */
 
@@ -96,6 +121,7 @@ module.exports = ({ gulp, credentialsDir }) => {
         runSequence(
             'install-amazon-credentials',
             'install-google-credentials',
+            'install-microsoft-credentials',
             // 'install-webdriver',
             callback
         );

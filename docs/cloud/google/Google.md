@@ -33,7 +33,7 @@ eigenes Projektverzeichnis/.gitignore:
 
 ## Integration des GoogleModule von Speech-React
 
-Um den Google Cloud-Dienst in der eigenen React-Anwendung verwenden zu können, muss das GoogleModule von Speech-Angular in die src/Apps.tsx Datei der React-Anwendung, wie nachfolgend im Beispielcode gezeigt, eingebaut werden.
+Um den Google Cloud-Dienst in der eigenen React-Anwendung verwenden zu können, muss das GoogleModule von Speech-React in die src/Apps.tsx Datei der React-Anwendung, wie nachfolgend im Beispielcode gezeigt, eingebaut werden.
 
 eigenes Projektverzeichnis/src/App.tsx:
 
@@ -92,7 +92,7 @@ Das GoogleModule initialisiert den Google Cloud-Service. Die Initialisierung der
 
 Will man die Google-Credetials nicht bei der Initialisierung übergeben, sondern erst später durch ein Formular, so kann dies mit dem optionalen Paramter:
 
-	const amazonOption = {
+	const googleOption = {
 		googleDynamicCredentialsFlag: true
 	};
 	

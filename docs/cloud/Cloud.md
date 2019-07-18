@@ -8,6 +8,8 @@ Hier werden die in Speech-React integrierten Cloud-Dienste aufgelistet:
 
 * **[MicrosoftModule](./microsoft/Microsoft.md):** erlaubt die Nutzung von Microsoft-ASR
 
+* **[RasaModule](./rasa/Rasa.md):** erlaubt die Nutzung von Rasa-NLU über einen eigenen Rasa-Server
+
 
 
 

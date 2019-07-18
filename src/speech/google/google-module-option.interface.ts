@@ -1,5 +1,5 @@
 /**
- * AmazonModuleOption Schnittstelle
+ * GoogleModuleOption Schnittstelle
  *
  * API-Version: 1.0
  * Datum:       09.05.2019

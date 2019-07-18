@@ -40,6 +40,8 @@ Folgende Basis-Services gibt es:
 
 * **[MicrosoftService](./microsoft/MicrosoftService.md):** erlaubt die Änderung der Microsoft-Credentials
 
+* **[RasaService](./rasa/RasaService.md):** erlaubt die Änderung der Rasa-Credentials
+
 
 Folgende Module gibt es:
 
@@ -50,3 +52,4 @@ Folgende Module gibt es:
 
 * **[MicrosoftModule](./../cloud/microsoft/Microsoft.md):** verwaltet die Microsoft Cloud-Dienstanbindung
 
+* **[RasaModule](./../cloud/rasa/Rasa.md):** verwaltet die Rasa Cloud-Dienstanbindung

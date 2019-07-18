@@ -33,6 +33,14 @@ export * from './microsoft/microsoft-module';
 export * from './microsoft/microsoft-service';
 
 
+// rasa-modul
+
+export * from './rasa/rasa-module-config.interface';
+export * from './rasa/rasa-module-option.interface';
+export * from './rasa/rasa-module';
+export * from './rasa/rasa-service';
+
+
 // base-service
 
 export * from './base/base-service-option.interface';

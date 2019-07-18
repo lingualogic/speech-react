@@ -60,6 +60,8 @@ module.exports = ({ gulp, docsDir, bundleDir, srcSpeechDir, buildDir, buildSpeec
             .pipe( replace( '"./google/google-service"', '"./speech-react"'))
             .pipe( replace( '"./microsoft/microsoft-module"', '"./speech-react"'))
             .pipe( replace( '"./microsoft/microsoft-service"', '"./speech-react"'))
+            .pipe( replace( '"./rasa/rasa-module"', '"./speech-react"'))
+            .pipe( replace( '"./rasa/rasa-service"', '"./speech-react"'))
             .pipe( replace( '"./base/base-service"', '"./speech-react"'))
             .pipe( replace( '"./speak/speak-service-const"', '"./speech-react"'))
             .pipe( replace( '"./speak/speak-service"', '"./speech-react"'))
@@ -142,6 +144,21 @@ module.exports = ({ gulp, docsDir, bundleDir, srcSpeechDir, buildDir, buildSpeec
             `${buildSpeechDir}/microsoft/microsoft-service.d.ts`,
         ])
         .pipe( gulp.dest( `${distDir}/microsoft` ));
+    });
+
+
+    /**
+     * Kopiert die Sourcedateien aus build/src nach dist/src/ von RasaModule
+     */
+
+    gulp.task('dist-copy-rasa-module', function() {
+        return gulp.src([
+            `${buildSpeechDir}/rasa/rasa-module-config.interface.d.ts`,
+            `${buildSpeechDir}/rasa/rasa-module-option.interface.d.ts`,
+            `${buildSpeechDir}/rasa/rasa-module.d.ts`,
+            `${buildSpeechDir}/rasa/rasa-service.d.ts`,
+        ])
+        .pipe( gulp.dest( `${distDir}/rasa` ));
     });
 
 
@@ -288,6 +305,7 @@ module.exports = ({ gulp, docsDir, bundleDir, srcSpeechDir, buildDir, buildSpeec
             'dist-copy-amazon-module',
             'dist-copy-google-module',
             'dist-copy-microsoft-module',
+            'dist-copy-rasa-module',
             'dist-copy-base-service',
             'dist-copy-speak-service',
             'dist-copy-listen-service',

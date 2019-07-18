@@ -4,7 +4,7 @@
  * Initialisiert und verwaltet alle verfuegbaren Speech-Services.
  *
  * Konfiguration: stable
- * Version: 0.5.12.0003 (Alpha) vom 08.07.2019
+ * Version: 0.5.13.0004 (Alpha) vom 18.07.2019
  *
  * Speech-Services:
  *
@@ -17,6 +17,7 @@
  *              Amazon      - Amazon Cloud-Dienst (TTS)
  *              Google      - Google Cloud-Dienst (NLU)
  *              Microsoft   - Microsoft Cloud-Dienst (ASR)
+ *              Rasa        - Rasa Cloud-Dienst (NLU)
  *
  * @module speech/service
  * @author SB
@@ -34,6 +35,7 @@ import {
     SPEECH_INTENT_SERVICE,
     SPEECH_LISTEN_SERVICE,
     SPEECH_MICROSOFT_SERVICE,
+    SPEECH_RASA_SERVICE,
     SPEECH_SPEAK_SERVICE
 } from './../const/speech-service-const';
 
@@ -46,6 +48,7 @@ import { BotService } from './../bot/bot-service'
 import { AmazonService } from './../amazon/amazon-service'
 import { GoogleService } from './../google/google-service'
 import { MicrosoftService } from './../microsoft/microsoft-service'
+import { RasaService } from './../rasa/rasa-service'
 
 
 // service 
@@ -87,6 +90,7 @@ export class ServiceManager {
         if ( ServiceManager._add( SPEECH_AMAZON_SERVICE, aOption ) !== 0 ) { result = -1; }
         if ( ServiceManager._add( SPEECH_GOOGLE_SERVICE, aOption ) !== 0 ) { result = -1; }
         if ( ServiceManager._add( SPEECH_MICROSOFT_SERVICE, aOption ) !== 0 ) { result = -1; }
+        if ( ServiceManager._add( SPEECH_RASA_SERVICE, aOption ) !== 0 ) { result = -1; }
 
         return result;
     }
@@ -141,6 +145,9 @@ export class ServiceManager {
                     break;
                 case SPEECH_MICROSOFT_SERVICE:
                     service = new MicrosoftService();
+                    break;
+                case SPEECH_RASA_SERVICE:
+                    service = new RasaService();
                     break;
 
                 default:

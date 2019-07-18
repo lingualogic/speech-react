@@ -107,6 +107,30 @@ module.exports = ({ gulp, credentialsDir }) => {
 
 
     /**
+     * Erzeugt rasa-credentials.ts in credentials/
+     */
+
+    gulp.task('install-rasa-credentials', function() {
+        try {
+            // pruefen auf vorhandene Rasa-Credentials Datei
+            fs.accessSync( `${credentialsDir}/rasa-credentials.ts` );
+        } catch (e) {
+            // Datei ist nicht vorhanden und kann erzeugt werden
+            return gulp.src([ `${credentialsDir}/rasa-credentials.ts` ])
+                .pipe( file( 'rasa-credentials.ts', ''))
+                .pipe(inject.append( "/**\n" ))
+                .pipe(inject.append( " * Rasa Credentials\n" ))
+                .pipe(inject.append( " */\n" ))
+                .pipe(inject.append( "\n" ))
+                .pipe(inject.append( "\n" ))
+                .pipe(inject.append( "export const RASA_APP_KEY = '';\n" ))
+                .pipe( gulp.dest(  credentialsDir ));
+        }
+        return gulp.src( '' ); // empty stream
+    });
+
+
+    /**
      * Installiert die WebDriver-Treiber fuer die  Protractor-Tests
      */
 
@@ -122,6 +146,7 @@ module.exports = ({ gulp, credentialsDir }) => {
             'install-amazon-credentials',
             'install-google-credentials',
             'install-microsoft-credentials',
+            'install-rasa-credentials',
             // 'install-webdriver',
             callback
         );

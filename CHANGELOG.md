@@ -1,6 +1,13 @@
 # Speech-React Release Notizen
 
 
+## 0.5.13.0004 Alpha (22.07.2019)
+
+### Features
+
+* **Examples:** Beispiele für Speak und Listen eingefügt
+
+
 ## 0.5.13.0004 Alpha (18.07.2019)
 
 ### Features

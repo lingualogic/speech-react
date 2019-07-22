@@ -1,0 +1,23 @@
+.button {
+
+    &:active, &:focus {
+     color: #61dafb;
+     outline: none;
+    }
+    &--microphone {
+      color: #61dafb;
+      font-size: 20vh;
+      background-color: transparent;
+    }
+  
+    &--microphone-active {
+      background-color: transparent;
+      color: #ff5852;
+      font-size: 20vh;
+      &:active, &:focus {
+       color: #ff5852;
+       outline: none;
+      }
+    }
+  
+  }

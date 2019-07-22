@@ -1,0 +1,27 @@
+{
+  "name": "listenapp",
+  "version": "0.5.13",
+  "productName": "ListenApp",
+  "description": "ListenApp",
+  "author": "LinguaLogic Team",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "speech-react": "file:../../dist/speech-react-0.5.13.tgz"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

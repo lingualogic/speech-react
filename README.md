@@ -130,6 +130,20 @@ Speech-React kann mit folgendem Befehl wieder deinstalliert werden:
 [**Release Notizen**](./CHANGELOG.md)
 
 
+## Beispiel-Apps
+
+Im examples Ordner sind mehrere kleine Beispiele für die einzelnen Services von Speech-React zu finden.
+Zum Ausführen der Beispiele muss nicht in den Beispielordner gewechselt werden.
+
+Folgende Befehle sind für die SpeakService-Beispiele einzugeben:
+
+    $ npm run speak
+
+Für das ListenService-Beispiel ist folgender Befehl einzugeben:
+
+    $ npm run listen
+
+
 ## Projektverantwortliche (LinguaLogic Team)
 
 Projektorganisation: **Leo Füchsel** (leo@lingualogic.de)

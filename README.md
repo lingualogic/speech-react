@@ -2,7 +2,7 @@
 
 Speech-React ist eine React Typescript-Bibliothek zur Integration von Sprachdiensten, wie Sprachausgabe (TTS), Spracherkennung (ASR), Sprachverstehen (NLU), Dialogverarbeitung (NLP) und Aktionsausführung in einer React Web-Seite oder Web-App. Kern von Speech-React ist ein **BotService**, der Dialoge eines Dialogskripts ausführen kann.
 
-Daneben git es folgende einzeln verwendbare Dienste: 
+Daneben git es folgende einzeln verwendbare Dienste:
 
 * **SpeakService** für die Sprachausgabe
 * **ListenService** für die Spracherennung
@@ -25,7 +25,7 @@ Um in eigenen Projekten Speech-React nutzen zu können, muss das Speech-Framewor
 
 ## Letzte Version
 
-* 0.5.13.0004 Alpha vom 18.07.2019 [Release Notizen](./CHANGELOG.md)
+* 0.5.13.0005 Alpha vom 23.07.2019 [Release Notizen](./CHANGELOG.md)
 
 Speech-React ist noch in einem frühen Entwicklungsstadium und sollte noch nicht für den produktiven Einsatz verwendet werden.
 Wir empfehlen für neue React-Projekte die Verwendung von Typescript, ansonsten kann Speech-React auch mit JavaScript verwendet werden.
@@ -133,7 +133,8 @@ Speech-React kann mit folgendem Befehl wieder deinstalliert werden:
 ## Beispiel-Apps
 
 Im examples Ordner sind mehrere kleine Beispiele für die einzelnen Services von Speech-React zu finden.
-Zum Ausführen der Beispiele muss nicht in den Beispielordner gewechselt werden.
+Zum Ausführen der Beispiele darf nicht in den Beispielordner gewechselt werden. Von dort aus funktioniert
+der Start der jeweiligen Beispiel-App nicht, da globale NPM-Packages aus dem Projektverzeichnis benötigt werden.
 
 Folgende Befehle sind für die SpeakService-Beispiele einzugeben:
 

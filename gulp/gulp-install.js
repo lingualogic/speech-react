@@ -118,12 +118,13 @@ module.exports = ({ gulp, credentialsDir }) => {
             // Datei ist nicht vorhanden und kann erzeugt werden
             return gulp.src([ `${credentialsDir}/rasa-credentials.ts` ])
                 .pipe( file( 'rasa-credentials.ts', ''))
-                .pipe(inject.append( "/**\n" ))
-                .pipe(inject.append( " * Rasa Credentials\n" ))
-                .pipe(inject.append( " */\n" ))
-                .pipe(inject.append( "\n" ))
-                .pipe(inject.append( "\n" ))
-                .pipe(inject.append( "export const RASA_APP_KEY = '';\n" ))
+                .pipe( inject.append( "/**\n" ))
+                .pipe( inject.append( " * Rasa Credentials\n" ))
+                .pipe( inject.append( " */\n" ))
+                .pipe( inject.append( "\n" ))
+                .pipe( inject.append( "\n" ))
+                .pipe( inject.append( "export const RASA_SERVER_URL = '';\n" ))
+                .pipe( inject.append( "export const RASA_APP_KEY = '';\n" ))
                 .pipe( gulp.dest(  credentialsDir ));
         }
         return gulp.src( '' ); // empty stream

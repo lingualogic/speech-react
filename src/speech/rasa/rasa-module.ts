@@ -99,7 +99,7 @@ export class RasaModule {
      */
 
     static setConfig( aConfigData: RasaModuleConfigInterface ): number {
-        console.log('RasaModule.setConfig:', aConfigData);
+        // console.log('RasaModule.setConfig:', aConfigData);
         return Rasa.setConfig( aConfigData );
     }
 

@@ -1,11 +1,12 @@
 # Speech-React Release Notizen
 
 
-## 0.5.13.0004 Alpha (22.07.2019)
+## 0.5.13.0004 Alpha (23.07.2019)
 
 ### Features
 
 * **Examples:** Beispiele für Speak und Listen eingefügt
+* **Rasa:** due URL des Rasa-Servers wird jetzt in den rasa-credentials mit eingetragen
 
 
 ## 0.5.13.0004 Alpha (18.07.2019)

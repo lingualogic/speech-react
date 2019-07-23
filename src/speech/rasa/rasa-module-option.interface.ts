@@ -1,10 +1,10 @@
 /**
  * RasaModuleOption Schnittstelle
  *
- * API-Version: 1.0
- * Datum:       11.07.2019
+ * API-Version: 1.1
+ * Datum:       22.07.2019
  *
- * Letzte Aenderung: 11.07.2019
+ * Letzte Aenderung: 22.07.2019
  * Status: rot
  *
  * @module speech/rasa
@@ -17,6 +17,8 @@
  */
 
 export interface RasaModuleOptionInterface {
+    /** legt die URL fuer die Verbindung zum Server fest */
+    rasaServerUrl?: string;
     /** legt dynamische Konfigurierbarkeit fest */
     rasaDynamicCredentialsFlag?: boolean;
     /** legt den AppKey fuer die Verbindung zum Server fest */

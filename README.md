@@ -115,6 +115,8 @@ Speech-React kann mit folgendem Befehl wieder deinstalliert werden:
 
 ## Dokumentation
 
+[**Schnelleinstieg**](./docs/quickstart/Readme.md)
+
 [**Architektur**](./docs/design/Design.md)
 
 [**Services**](./docs/service/Service.md)
@@ -136,7 +138,7 @@ Im examples Ordner sind mehrere kleine Beispiele für die einzelnen Services von
 Zum Ausführen der Beispiele darf nicht in den Beispielordner gewechselt werden. Von dort aus funktioniert
 der Start der jeweiligen Beispiel-App nicht, da globale NPM-Packages aus dem Projektverzeichnis benötigt werden.
 
-Folgende Befehle sind für die SpeakService-Beispiele einzugeben:
+Folgender Befehl ist im Hauptprojektverzeichnis für das SpeakService-Beispiel einzugeben:
 
     $ npm run speak
 

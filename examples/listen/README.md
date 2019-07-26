@@ -2,13 +2,9 @@
 
 Mit diesem einfachen Beispiel in React wird die direkte Einbindung von speech-react in eine WebApp gezeigt.
 
-## Installation
 
-Die ListenApp wird mit folgenden Befehl installiert:
+## Ausführen
 
-    $ cd examples/listen
-    $ npm install
+Die ListenApp wird mit folgenden Befehl aus dem Hauptprojektverzeichnis heraus gestartet:
 
-Danach kann die ListenApp mit folgenden Befehl gestartet werden (funktioniert nur in Chrome):
-
-    $ npm start
+    $ npm run listen

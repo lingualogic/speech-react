@@ -2,6 +2,8 @@
 
 Die Dokumentation des Speech-React SDK:
 
+## [Schnelleinstieg](./quickstart/README.md)
+
 ## [Architektur](./design/Design.md)
 
 ## [Services](./service/Service.md)

@@ -2,13 +2,10 @@
 
 Mit diesem einfachen Beispiel in React wird die direkte Einbindung von speech-react in eine WebApp gezeigt.
 
-## Installation
 
-Die SpeakApp wird mit folgenden Befehl installiert:
+## Ausführen
 
-    $ cd examples/speak
-    $ npm install
+Die SpeakApp wird mit folgenden Befehl vom Hauptverzeichnis aus ausgeführt:
 
-Danach kann die SpeakApp mit folgenden Befehl gestartet werden:
+    $ npm run speak
 
-    $ npm start

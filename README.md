@@ -115,7 +115,7 @@ Speech-React kann mit folgendem Befehl wieder deinstalliert werden:
 
 ## Dokumentation
 
-[**Schnelleinstieg**](./docs/quickstart/Readme.md)
+[**Schnelleinstieg**](./docs/quickstart/README.md)
 
 [**Architektur**](./docs/design/Design.md)
 

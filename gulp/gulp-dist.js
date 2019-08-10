@@ -52,6 +52,7 @@ module.exports = ({ gulp, docsDir, bundleDir, srcSpeechDir, buildDir, buildSpeec
         return gulp.src( `${distDir}/index.js` )
             .pipe( replace( '"./const/speech-service-const"', '"./speech-react"'))
             .pipe( replace( '"./const/speech-service-version"', '"./speech-react"'))
+            .pipe( replace( '"./common/event_emitter"', '"./speech-react"'))
             .pipe( replace( '"./nuance/nuance-module"', '"./speech-react"'))
             .pipe( replace( '"./nuance/nuance-service"', '"./speech-react"'))
             .pipe( replace( '"./amazon/amazon-module"', '"./speech-react"'))
@@ -74,6 +75,18 @@ module.exports = ({ gulp, docsDir, bundleDir, srcSpeechDir, buildDir, buildSpeec
             .pipe( replace( '"./bot/bot-service"', '"./speech-react"'))
             .pipe( replace( '"./service/service-manager"', '"./speech-react"'))
             .pipe( gulp.dest( distDir ));
+    });
+
+
+    /**
+     * Kopiert die Sourcedateien aus build/src/common nach dist/src/common
+     */
+
+    gulp.task('dist-copy-common', function() {
+        return gulp.src([
+            `${buildSpeechDir}/common/event_emitter.d.ts`
+        ])
+            .pipe( gulp.dest(`${distDir}/common`));
     });
 
 
@@ -300,6 +313,7 @@ module.exports = ({ gulp, docsDir, bundleDir, srcSpeechDir, buildDir, buildSpeec
         runSequence(
             'dist-copy-index',
             'dist-replace-index',
+            'dist-copy-common',
             'dist-copy-const',
             'dist-copy-service',
             'dist-copy-amazon-module',

@@ -53,7 +53,7 @@ Dem ServiceManager wird der Name des Speech-Services übergeben und der jeweilig
 Dazu müssen das Speech-Framework und das Speech-React npm-Paket in der gleichen Version vorher ins eigene ReactApp-Projekt kopiert und installiert worden sein.
 
 	$ npm install --save speech-framework-<version>.tgz
-	$ npm install --save speech-angular-<version>.tgz
+	$ npm install --save speech-react-<version>.tgz
 	 
 
 ## Konfiguration

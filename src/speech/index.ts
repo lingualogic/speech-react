@@ -9,6 +9,11 @@ export { SPEECH_ACTION_SERVICE, SPEECH_AMAZON_SERVICE, SPEECH_BOT_SERVICE, SPEEC
 export { SPEECHSERVICE_API_VERSION } from './const/speech-service-version';
 
 
+// common
+
+export { EventEmitter } from './common/event_emitter';
+
+
 // amazon-modul
 
 export * from './amazon/amazon-module-config.interface';

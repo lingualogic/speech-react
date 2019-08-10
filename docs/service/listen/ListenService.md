@@ -64,7 +64,7 @@ Beispiel-Komponente für die Integration von Sprache:
 
 	// ListenService 
 		
-	import { SPEECH_LISTEN_SERVICE, ServiceManager, ListenService, LISTEN_DE_LANGUAGE, LISTEN_EN_ALANGUAGE } from 'speech-angular';
+	import { SPEECH_LISTEN_SERVICE, ServiceManager, ListenService, LISTEN_DE_LANGUAGE, LISTEN_EN_ALANGUAGE } from 'speech-react';
 
 	
 	export class ListenComponent extends React.Component {

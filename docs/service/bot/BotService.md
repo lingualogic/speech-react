@@ -75,7 +75,7 @@ Beispielkomponente zum manuellen Einlesen einer Dialogskriptdatei:
 
 	// BotService 
 		
-	import { SPEECH_BOT_SERVICE, ServiceManager, BotService } from 'speech-angular';
+	import { SPEECH_BOT_SERVICE, ServiceManager, BotService } from 'speech-react';
 
 	
 	export class BotComponent extends React.Component {
@@ -134,7 +134,7 @@ Beispiel-Komponente für das ausführen eines Dialogs:
 
 	// BotService 
 		
-	import { SPEECH_BOT_SERVICE, ServiceManager, BotService } from 'speech-angular';
+	import { SPEECH_BOT_SERVICE, ServiceManager, BotService } from 'speech-react';
 
 
 	export class BotComponent extends React.Component {

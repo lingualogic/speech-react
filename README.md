@@ -25,7 +25,7 @@ Um in eigenen Projekten Speech-React nutzen zu können, muss das Speech-Framewor
 
 ## Letzte Version
 
-* 0.5.13.0005 Alpha vom 23.07.2019 [Release Notizen](./CHANGELOG.md)
+* 0.5.13.0006 Alpha vom 10.08.2019 [Release Notizen](./CHANGELOG.md)
 
 Speech-React ist noch in einem frühen Entwicklungsstadium und sollte noch nicht für den produktiven Einsatz verwendet werden.
 Wir empfehlen für neue React-Projekte die Verwendung von Typescript, ansonsten kann Speech-React auch mit JavaScript verwendet werden.

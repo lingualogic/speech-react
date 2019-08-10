@@ -1,6 +1,13 @@
 # Speech-React Release Notizen
 
 
+## 0.5.13.0006 Alpha (10.08.2019)
+
+### Fix
+
+kleinere Korrekturen
+
+
 ## 0.5.13.0004 Alpha (23.07.2019)
 
 ### Features

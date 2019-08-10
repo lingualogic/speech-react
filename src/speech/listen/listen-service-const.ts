@@ -1,8 +1,8 @@
 /**
  * Globale Konstanten fuer ListenService
  *
- * API-Version: 1.0
- * Datum:       11.10.2018
+ * API-Version: 1.1
+ * Datum:       24.10.2018
  *
  * @module speech/listen
  * @author SB
@@ -29,6 +29,7 @@ export const LISTEN_SERVICEMOCK_NAME = 'ListenServiceMock';
 // ASR-Plugins
 
 export const LISTEN_HTML5_ASR = 'ASRHtml5';
+export const LISTEN_MICROSOFT_ASR = 'ASRMicrosoft';
 export const LISTEN_NUANCE_ASR = 'ASRNuance'; // deprecated
 
 

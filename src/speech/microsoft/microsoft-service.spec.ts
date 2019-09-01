@@ -63,10 +63,11 @@ describe('MicrosoftService', () => {
     describe('Funktion setCredentials', () => {
 
         it('sollte Credentials eintragen', () => {
-            expect( microsoftService.setCredentials( 'TestRegion', 'TestSubscriptionKey' )).toBe( 0 );
+            expect( microsoftService.setCredentials( 'TestRegion', 'TestSubscriptionKey', 'TestLuisEndpoint' )).toBe( 0 );
             const credentials = MicrosoftModule.getConfig();
             expect( credentials.microsoftRegion ).toBe( 'TestRegion' );
             expect( credentials.microsoftSubscriptionKey ).toBe( 'TestSubscriptionKey' );
+            expect( credentials.microsoftLuisEndpoint ).toBe( 'TestLuisEndpoint' );
         });
 
     });

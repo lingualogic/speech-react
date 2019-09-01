@@ -45,10 +45,11 @@ export class MicrosoftService {
      * @param aSubscriptionKey - Microsoft Credentials
      */
 
-    setCredentials( aRegion: string, aSubscriptionKey: string ): number {
+    setCredentials( aRegion: string, aSubscriptionKey: string, aLuisEndpoint = '' ): number {
         const configData: MicrosoftModuleConfigInterface = {
             microsoftRegion: aRegion,
-            microsoftSubscriptionKey: aSubscriptionKey
+            microsoftSubscriptionKey: aSubscriptionKey,
+            microsoftLuisEndpoint: aLuisEndpoint
         };
         console.log('MicrosoftService.setCredentials:', configData);
         return MicrosoftModule.setConfig( configData );

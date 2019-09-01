@@ -4,14 +4,14 @@ import typescript from 'rollup-plugin-typescript2';
 import json from 'rollup-plugin-json';
 import commonjs from 'rollup-plugin-commonjs';
 import nodeResolve from 'rollup-plugin-node-resolve';
-import { uglify } from 'rollup-plugin-uglify';
+import uglify from 'rollup-plugin-uglify';
 import { minify } from 'uglify-es';
 
 
 // Speech-Angular Version
 
 import * as frameworkVersion from './node_modules/speech-framework/speech-version.json';
-import * as reactVersion from './src/speech/speech-react-version.json';
+import * as reactVersion from './config/speech-react-version.json';
 
 
 const speechVersion = frameworkVersion.SPEECH_VERSION_NUMBER + '.' + frameworkVersion.SPEECH_VERSION_BUILD + ' (' + frameworkVersion.SPEECH_VERSION_TYPE + ') vom ' + frameworkVersion.SPEECH_VERSION_DATE;
@@ -73,9 +73,9 @@ export default {
         name: 'speech-react',
         sourcemap: false,
         globals: {
+            'rxjs': 'rxjs',
             'speech-framework': 'speech-framework'
         }
-
     },
     external: [
         'rxjs',
@@ -97,8 +97,7 @@ export default {
         }}, minify),
 
         nodeResolve({
-            jsnext: true,
-            main: false
+            mainFields: ['module', 'main']
         }),
 
         commonjs({

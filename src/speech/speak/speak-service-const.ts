@@ -28,6 +28,8 @@ export const SPEAK_SERVICEMOCK_NAME = 'SpeakServiceMock';
 
 export const SPEAK_HTML5_TTS = 'TTSHtml5';
 export const SPEAK_AMAZON_TTS = 'TTSAmazon';
+export const SPEAK_GOOGLE_TTS = 'TTSGoogle';  // noch nicht implementiert
+export const SPEAK_MICROSOFT_TTS = 'TTSMicrosoft';
 export const SPEAK_NUANCE_TTS = 'TTSNuance'; // deprecated
 
 export const SPEAK_DE_LANGUAGE = 'de';

@@ -20,14 +20,13 @@ Die Speech-React Bibliothek benötigt das Speech-Framework, welches unter [https
 
 Um in eigenen Projekten Speech-React nutzen zu können, muss das Speech-Framework NPM-Package von der [LinguaLogic-Seite](https://lingualogic.de) heruntergeladen werden, in den eigenen Projektordner kopiert werden und vor Speech-React installiert sein. Das Speech-Framework NPM-Package wird mit folgendem Befehl installiert:
 
-    $ npm install speech-framework-0.5.13.tgz
+    $ npm install speech-framework-0.5.14.tgz
 
 
 ## Letzte Version
 
-* 0.5.13.0006 Alpha vom 10.08.2019 [Release Notizen](./CHANGELOG.md)
+* 0.5.14.0007 Beta vom 31.08.2019 [Release Notizen](./CHANGELOG.md)
 
-Speech-React ist noch in einem frühen Entwicklungsstadium und sollte noch nicht für den produktiven Einsatz verwendet werden.
 Wir empfehlen für neue React-Projekte die Verwendung von Typescript, ansonsten kann Speech-React auch mit JavaScript verwendet werden.
 
 
@@ -90,11 +89,11 @@ Die API-Dokumentation kann mit folgenden Befehl in docs/api erzeugt werden:
 
     $ npm run docs
 
-Das im dist/ Ordner erzeugte npm-Paket 'speech-react-0.5.13.tgz' kann in den eigenen React Projektordner kopiert werden.
+Das im dist/ Ordner erzeugte npm-Paket 'speech-react-0.5.14.tgz' kann in den eigenen React Projektordner kopiert werden.
 
-Die Installation des 'speech-react-0.5.13.tgz' npm-Paketes erfolgt im eigenen React Projektordner mit folgendem Befehl:
+Die Installation des 'speech-react-0.5.14.tgz' npm-Paketes erfolgt im eigenen React Projektordner mit folgendem Befehl:
 
-    $ npm install speech-react-0.5.13.tgz
+    $ npm install speech-react-0.5.14.tgz
 
 Danach kann Speech-React im eigenen React-Projekt verwendet werden. 
 

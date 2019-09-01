@@ -29,9 +29,11 @@ export const INTENT_SERVICEMOCK_NAME = 'IntentServiceMock';
 // NLU-Plugins
 
 
-export const INTENT_NUANCE_NLU = 'NLUNuance'; // deprecated
+export const INTENT_HTML5_NLU = 'NLUHtml5';   // noch nicht implementiert
 export const INTENT_GOOGLE_NLU = 'NLUGoogle';
-export const INTENT_HTML5_NLU = 'NLUHtml5';
+export const INTENT_MICROSOFT_NLU = 'NLUMicrosoft';
+export const INTENT_RASA_NLU = 'NLURasa';
+export const INTENT_NUANCE_NLU = 'NLUNuance'; // deprecated
 
 
 // Sprach-Konstanten fuer Deutsch und Englisch

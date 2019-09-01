@@ -1,6 +1,6 @@
 # Speech-React Quellcode
 
-**Version:** **0.5.13**
+**Version:** **0.5.14**
 
 Der Quellcode von Speech-React ist vollständig im Verzeichnis src/speech untergebracht, und baut auf dem Speech-Framework auf. Es sollten keine direkten Zugriffe auf das Speech-Framework genutzt werden, da sich das Speech-Framework API noch stark ändern kann. Alle Zugriffe sollten nur über die Services des Speech-React SDK im eigenen Code erfolgen.
 
@@ -26,6 +26,8 @@ Das Speech-React SDK besteht aus folgenden Services:
 
 * **MicrosoftService**: dient zum eintragen von Microsoft-Credentials
 
+* **RasaService**: dient zum eintragen von Rasa-Credentials
+
 
 Jeder Service hat sein eigenes Verzeichnis, in dem der Code des Service untergebracht ist.
 
@@ -37,3 +39,5 @@ Zusätzlich gibt des noch Module, die für die Initialsierung von optionalen Sub
 * **GoogleModule**: dient zur Initialisierung des Google Cloud-Service
 
 * **MicrosoftModule**: dient zur Initialisierung des Microsoft Cloud-Service
+
+* **RasaModule**: dient zur Initialisierung des Rasa Cloud-Service (benötigt eigenen Rasa-Server)

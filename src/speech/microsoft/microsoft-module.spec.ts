@@ -77,7 +77,8 @@ describe('MicrosoftModule', () => {
         it('sollte Credentials nicht eintragen, wenn microsoftDynamicCredentialsFlag false ist', (done) => {
             const microsoftConfigData: MicrosoftModuleConfigInterface = {
                 microsoftRegion: 'testRegion',
-                microsoftSubscriptionKey: 'testSubscriptionKey'
+                microsoftSubscriptionKey: 'testSubscriptionKey',
+                microsoftLuisEndpoint: 'testLuisEndpoint'
             };
             const microsoftOption: MicrosoftModuleOptionInterface = {
                 microsoftDynamicCredentialsFlag: false,
@@ -95,7 +96,8 @@ describe('MicrosoftModule', () => {
         it('sollte Credentials eintragen, wenn microsoftDynamicCredentialsFlag true ist', (done) => {
             const microsoftConfigData: MicrosoftModuleConfigInterface = {
                 microsoftRegion: 'testRegion',
-                microsoftSubscriptionKey: 'testSubscriptionKey'
+                microsoftSubscriptionKey: 'testSubscriptionKey',
+                microsoftLuisEndpoint: 'testLuisEndpoint'
             };
             const microsoftOption: MicrosoftModuleOptionInterface = {
                 microsoftDynamicCredentialsFlag: true,

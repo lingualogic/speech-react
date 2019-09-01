@@ -1,10 +1,10 @@
 /**
  * MicrosoftModuleConfig-Schnittstelle
  *
- * API-Version: 1.0
- * Datum:       20.06.2019
+ * API-Version: 1.1
+ * Datum:       28.08.2019
  *
- * Letzte Aenderung: 20.06.2019
+ * Letzte Aenderung: 28.08.2019
  * Status: rot
  *
  * @module speech/microsoft
@@ -21,4 +21,6 @@ export interface MicrosoftModuleConfigInterface {
     microsoftRegion: string;
     /** legt den SubscriptionKey fuer die Verbindung zum Server fest */
     microsoftSubscriptionKey: string;
+    /** legt den Endpunkt fuer Luis (NLU) fuer die Verbindung zum Server fest */
+    microsoftLuisEndpoint: string;
 }

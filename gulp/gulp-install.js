@@ -100,6 +100,7 @@ module.exports = ({ gulp, credentialsDir }) => {
                 .pipe(inject.append( "\n" ))
                 .pipe(inject.append( "export const MICROSOFT_REGION = '';\n" ))
                 .pipe(inject.append( "export const MICROSOFT_SUBSCRIPTION_KEY = '';\n" ))
+                .pipe(inject.append( "export const MICROSOFT_LUIS_ENDPOINT = '';\n" ))
                 .pipe( gulp.dest(  credentialsDir ));
         }
         return gulp.src( '' ); // empty stream

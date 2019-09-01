@@ -29,6 +29,7 @@ export const LISTEN_SERVICEMOCK_NAME = 'ListenServiceMock';
 // ASR-Plugins
 
 export const LISTEN_HTML5_ASR = 'ASRHtml5';
+export const LISTEN_GOOGLE_ASR = 'ASRGoogle';  // noch nicht implementiert
 export const LISTEN_MICROSOFT_ASR = 'ASRMicrosoft';
 export const LISTEN_NUANCE_ASR = 'ASRNuance'; // deprecated
 

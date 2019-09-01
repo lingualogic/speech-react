@@ -11,6 +11,7 @@ Um die MicrosoftModule Cloud-Dienstanbindung nutzen zu können, muss ein Azure A
 
 * **MICROSOFT_REGION** - Microsoft Region
 * **MICROSOFT_SUBSCRIPTION_KEY** - Microsoft Subscription Key
+* **MICROSOFT_LUIS_ENDPOINT** - Microsoft Luis Endpunkt
 
 
 Die Datei credentials/microsoft-credentials.ts sollte folgendes beinhalten:
@@ -21,6 +22,7 @@ Die Datei credentials/microsoft-credentials.ts sollte folgendes beinhalten:
 	
 	export const MICROSOFT_REGION = ''; 			// <--- Hier die eigene Microsoft REGION eintragen
 	export const MICROSOFT_SUBSCRIPTION_KEY = '';   	// <--- Hier den eigenen Microsoft Subscription Key eintragen 
+	export const MICROSOFT_LUIS_ENDPOINT = '';   	// <--- Hier den eigenen Microsoft Luis Endpunkt eintragen
 
 
 Diese Datei darf nicht in das Git-Repository übernommen werden. Dazu wird in der .gitignore Datei des Projektes der Name der Datei eingetragen.
@@ -52,10 +54,11 @@ eigenes Projektverzeichnis/src/App.tsx:
 	// Microsoft-Credentials
 	
 	// TODO: Hier muessen die echten Zugangsdaten eingetragen werden
-	import { MICROSOFT_REGION, MICROSOFT_SUBSCRIPTION_KEY } from './../credentials/microsoft-credentials';
+	import { MICROSOFT_REGION, MICROSOFT_SUBSCRIPTION_KEY, MICROSOFT_LUIS_ENDPOINT } from './../credentials/microsoft-credentials';
 	const microsoftOption = {
 	  	microsoftRegion: MICROSOFT_REGION,
 	  	microsoftSubscriptionKey: MICROSOFT_SUBSCRIPTION_KEY
+		microsoftLuisEndpoint: MICROSOFT_LUIS_ENDPOINT
 	};
 	
 	

@@ -69,12 +69,14 @@ module.exports = ({ gulp, credentialsDir }) => {
             // Datei ist nicht vorhanden und kann erzeugt werden
             return gulp.src([ `${credentialsDir}/google-credentials.ts` ])
                 .pipe( file( 'google-credentials.ts', ''))
-                .pipe(inject.append( "/**\n" ))
-                .pipe(inject.append( " * Google Credentials\n" ))
-                .pipe(inject.append( " */\n" ))
-                .pipe(inject.append( "\n" ))
-                .pipe(inject.append( "\n" ))
-                .pipe(inject.append( "export const GOOGLE_APP_KEY = '';\n" ))
+                .pipe( inject.append( "/**\n" ))
+                .pipe( inject.append( " * Google Credentials\n" ))
+                .pipe( inject.append( " */\n" ))
+                .pipe( inject.append( "\n" ))
+                .pipe( inject.append( "\n" ))
+                .pipe( inject.append( "export const GOOGLE_APP_KEY = '';\n" ))
+                .pipe( inject.append( "export const DIALOGFLOW_TOKENSERVER_URL = '';\n" ))
+                .pipe( inject.append( "export const DIALOGFLOW_PROJECT_ID = '';\n" ))
                 .pipe( gulp.dest(  credentialsDir ));
         }
         return gulp.src( '' ); // empty stream

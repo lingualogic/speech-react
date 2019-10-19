@@ -1,11 +1,11 @@
 /**
  * BotService zur Anbindung des Bot an Angular.
  *
- * API-Version: 1.0
- * Datum:       15.09.2018
+ * API-Version: 1.1
+ * Datum:       08.09.2019
  *
- * Letzte Aenderung: 28.02.2019
- * Status:           gelb
+ * Letzte Aenderung: 08.09.2019
+ * Status:           rot
  *
  * @module speech/bot
  * @author SB
@@ -24,7 +24,7 @@ import {
     BotFactory,
     BotInterface,
     DialogActionInterface,
-    DialogSpeakInterface
+    DialogSpeakInterface,
 } from 'speech-framework';
 
 
@@ -40,6 +40,7 @@ import { BOTSERVICE_API_VERSION } from './bot-service-version';
 import { BotServiceConfig } from './bot-service-config';
 import { BotServiceActionInterface } from './bot-service-action.interface';
 import { BotServiceOptionInterface } from './bot-service-option.interface';
+import { BotServiceDataInterface } from './bot-service-data.interface';
 
 
 // Konstanten
@@ -83,6 +84,7 @@ export class BotService extends BaseService {
     // Service-Events
 
     private mDialogSetEvent = new EventEmitter<string>( BOT_ASYNC_EVENT );
+    private mDialogImportEvent = new EventEmitter( BOT_ASYNC_EVENT );
     private mDialogParseEvent = new EventEmitter( BOT_ASYNC_EVENT );
     private mDialogStartEvent = new EventEmitter( BOT_ASYNC_EVENT );
     private mDialogStopEvent = new EventEmitter( BOT_ASYNC_EVENT );
@@ -306,6 +308,12 @@ export class BotService extends BaseService {
             return 0;
         });
 
+        this.mBot.addDialogJsonEvent( aServiceName, () => {
+            // console.log('BotService._initAllEvent: dialog json event:');
+            this.mDialogImportEvent.emit();
+            return 0;
+        });
+
         this.mBot.addDialogParseEvent( aServiceName, () => {
             // console.log('BotService._initAllEvent: dialog start event:');
             this.mDialogParseEvent.emit();
@@ -373,6 +381,17 @@ export class BotService extends BaseService {
 
     get setDialogEvent() {
         return this.mDialogSetEvent;
+    }
+
+
+    /**
+     * Ereignis fuer importiere Json-DialogDaten
+     *
+     * @readonly
+     */
+
+    get importEvent() {
+        return this.mDialogImportEvent;
     }
 
 
@@ -795,6 +814,23 @@ export class BotService extends BaseService {
 
     get dialog() {
         return this.getDialog();
+    }
+
+
+    /**
+     * Json-Daten importieren und im Dialogspeicher ablegen
+     *
+     * @param {DialogServiceDataInterface} aJsonDialogData - Json-Dialogdaten
+     *
+     * @returns {number}
+     */
+
+    import( aJsonDialogData: BotServiceDataInterface[]): number {
+        if ( !this.mBot ) {
+            this._error('import', 'keine Bot-Komponente vorhanden');
+            return -1;
+        }
+        return this.mBot.transformJsonData( aJsonDialogData );
     }
 
 

@@ -23,6 +23,10 @@ export interface GoogleModuleOptionInterface {
     googleAppKey?: string;
     /** legt fest, ob Port oder Mock geladen werden */
     googleMockFlag?: boolean;
+    /** legt die URL fuer die Verbindung zum Dialogflow-TokenServer fest */
+    dialogflowTokenServerUrl?: string;
+    /** legt die Projekt-ID von Dialogflow fest */
+    dialogflowProjectId?: string;
     /** legt die Fehlerausgabe fest */
     errorOutputFlag?: boolean;
 }

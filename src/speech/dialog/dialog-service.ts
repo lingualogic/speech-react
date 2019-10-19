@@ -1,10 +1,10 @@
 /**
  * DialogService zur Anbindung des Dialogs an Angular.
  *
- * API-Version: 1.0
- * Datum:       26.03.2019
+ * API-Version: 1.1
+ * Datum:       08.09.2019
  *
- * Letzte Aenderung: 26.03.2019
+ * Letzte Aenderung: 08.09.2019
  * Status:           rot
  *
  * @module speech/dialog
@@ -41,6 +41,7 @@ import { DialogServiceConfig } from './dialog-service-config';
 import { DialogServiceActionInterface } from './dialog-service-action.interface';
 import { DialogServiceSpeakInterface } from './dialog-service-speak.interface';
 import { DialogServiceOptionInterface } from './dialog-service-option.interface';
+import { DialogServiceDataInterface } from './dialog-service-data.interface';
 
 
 // Konstanten
@@ -84,6 +85,7 @@ export class DialogService extends BaseService {
     // Service-Events
 
     private mDialogSetEvent = new EventEmitter<string>( DIALOG_ASYNC_EVENT );
+    private mDialogImportEvent = new EventEmitter( DIALOG_ASYNC_EVENT );
     private mDialogParseEvent = new EventEmitter( DIALOG_ASYNC_EVENT );
     private mDialogStartEvent = new EventEmitter( DIALOG_ASYNC_EVENT );
     private mDialogStopEvent = new EventEmitter( DIALOG_ASYNC_EVENT );
@@ -294,13 +296,19 @@ export class DialogService extends BaseService {
         }
 
         this.mDialog.addDialogSetEvent( aServiceName, (aDialogName: string) => {
-            // console.log('DialogService._initAllEvent: dialog start event:');
+            // console.log('DialogService._initAllEvent: dialog set event:');
             this.mDialogSetEvent.emit(aDialogName);
             return 0;
         });
 
+        this.mDialog.addDialogJsonEvent( aServiceName, () => {
+            // console.log('DialogService._initAllEvent: dialog import event:');
+            this.mDialogImportEvent.emit();
+            return 0;
+        });
+
         this.mDialog.addDialogParseEvent( aServiceName, () => {
-            // console.log('DialogService._initAllEvent: dialog start event:');
+            // console.log('DialogService._initAllEvent: dialog parse event:');
             this.mDialogParseEvent.emit();
             return 0;
         });
@@ -373,6 +381,17 @@ export class DialogService extends BaseService {
 
     get setDialogEvent() {
         return this.mDialogSetEvent;
+    }
+
+
+    /**
+     * Ereignis fuer importieren der Json-DialogDaten
+     *
+     * @readonly
+     */
+
+    get importEvent() {
+        return this.mDialogImportEvent;
     }
 
 
@@ -643,6 +662,23 @@ export class DialogService extends BaseService {
 
     get dialog() {
         return this.getDialog();
+    }
+
+
+    /**
+     * Json-Daten importieren und im Dialogspeicher ablegen
+     *
+     * @param {DialogServiceDataInterface} aJsonDialogData - Json-Dialogdaten
+     *
+     * @returns {number}
+     */
+
+    import( aJsonDialogData: DialogServiceDataInterface[]): number {
+        if ( !this.mDialog ) {
+            this._error('parse', 'keine Dialog-Komponente vorhanden');
+            return -1;
+        }
+        return this.mDialog.transformJsonData( aJsonDialogData );
     }
 
 

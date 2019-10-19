@@ -76,11 +76,15 @@ describe('GoogeModule', () => {
 
         it('sollte Credentials nicht eintragen, wenn googleDynamicCredentialsFlag false ist', (done) => {
             const googleConfigData: GoogleModuleConfigInterface = {
-                googleAppKey: 'testAppKeyn'
+                googleAppKey: 'testAppKey',
+                dialogflowTokenServerUrl: 'testTokenServerUrl',
+                dialogflowProjectId: 'testProjectId'
             };
             const googleOption: GoogleModuleOptionInterface = {
                 googleDynamicCredentialsFlag: false,
                 googleAppKey: 'testAppKey',
+                dialogflowTokenServerUrl: 'testTokenServerUrl',
+                dialogflowProjectId: 'testProjectId',
                 googleMockFlag: GOOGLE_MOCK_FLAG
             };
             GoogleModule.init( googleOption, (aGoogleFlag: boolean) => {
@@ -92,7 +96,9 @@ describe('GoogeModule', () => {
 
         it('sollte Credentials eintragen, wenn googleDynamicCredentialsFlag true ist', (done) => {
             const googleConfigData: GoogleModuleConfigInterface = {
-                googleAppKey: 'testAppKey'
+                googleAppKey: 'testAppKey',
+                dialogflowTokenServerUrl: 'testTokenServerUrl',
+                dialogflowProjectId: 'testProjectId'
             };
             const googleOption: GoogleModuleOptionInterface = {
                 googleDynamicCredentialsFlag: true,

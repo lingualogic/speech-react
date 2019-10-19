@@ -26,7 +26,7 @@ import { GoogleModuleConfigInterface } from './google-module-config.interface';
 
 export class GoogleService {
 
-    
+
     /**
      * Dummy-Initfunktion fuer Service-Manager
      * 
@@ -44,9 +44,11 @@ export class GoogleService {
      * @param aAppKey - Google AppKey
      */
 
-    setCredentials( aAppKey: string ): number {
+    setCredentials( aAppKey: string, aDialogflowTokenServerUrl: string, aDialogProjectId: string ): number {
         const configData: GoogleModuleConfigInterface = {
-            googleAppKey: aAppKey
+            googleAppKey: aAppKey,
+            dialogflowTokenServerUrl: aDialogflowTokenServerUrl,
+            dialogflowProjectId: aDialogProjectId
         };
         console.log('GoogleService.setCredentials:', configData);
         return GoogleModule.setConfig( configData );

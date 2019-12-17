@@ -1,7 +1,7 @@
 /**
  * Unit-Test von GoogleService
  *
- * Letzter Aenderung: 03.04.2019
+ * Letzter Aenderung: 17.12.2019
  * Status: gelb
  *
  * getestet unter:  Chrome(Mac)
@@ -63,9 +63,10 @@ describe('GoogleService', () => {
     describe('Funktion setCredentials', () => {
 
         it('sollte Credentials eintragen', () => {
-            expect( googleService.setCredentials( 'TestAppKey', 'TestTokenServerUrl', 'TestProjectId' )).toBe( 0 );
+            expect( googleService.setCredentials( 'TestAppKey', 'TestServerUrl', 'TestTokenServerUrl', 'TestProjectId' )).toBe( 0 );
             const credentials = GoogleModule.getConfig();
             expect( credentials.googleAppKey ).toBe( 'TestAppKey' );
+            expect( credentials.googleServerUrl ).toBe( 'TestServerUrl' );
             expect( credentials.dialogflowTokenServerUrl ).toBe( 'TestTokenServerUrl' );
             expect( credentials.dialogflowProjectId ).toBe( 'TestProjectId' );
         });

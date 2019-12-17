@@ -1,7 +1,7 @@
 /**
  * Unit-Test von GoogleModule
  *
- * Letzter Aenderung: 09.05.2019
+ * Letzter Aenderung: 17.12.2019
  * Status: gelb
  *
  * getestet unter:  Chrome(Mac)
@@ -77,6 +77,7 @@ describe('GoogeModule', () => {
         it('sollte Credentials nicht eintragen, wenn googleDynamicCredentialsFlag false ist', (done) => {
             const googleConfigData: GoogleModuleConfigInterface = {
                 googleAppKey: 'testAppKey',
+                googleServerUrl: 'testServerUrl',
                 dialogflowTokenServerUrl: 'testTokenServerUrl',
                 dialogflowProjectId: 'testProjectId'
             };
@@ -97,6 +98,7 @@ describe('GoogeModule', () => {
         it('sollte Credentials eintragen, wenn googleDynamicCredentialsFlag true ist', (done) => {
             const googleConfigData: GoogleModuleConfigInterface = {
                 googleAppKey: 'testAppKey',
+                googleServerUrl: 'testServerUrl',
                 dialogflowTokenServerUrl: 'testTokenServerUrl',
                 dialogflowProjectId: 'testProjectId'
             };

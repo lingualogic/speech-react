@@ -75,6 +75,7 @@ module.exports = ({ gulp, credentialsDir }) => {
                 .pipe( inject.append( "\n" ))
                 .pipe( inject.append( "\n" ))
                 .pipe( inject.append( "export const GOOGLE_APP_KEY = '';\n" ))
+                .pipe( inject.append( "export const GOOGLE_SERVER_URL = '';\n" ))
                 .pipe( inject.append( "export const DIALOGFLOW_TOKENSERVER_URL = '';\n" ))
                 .pipe( inject.append( "export const DIALOGFLOW_PROJECT_ID = '';\n" ))
                 .pipe( gulp.dest(  credentialsDir ));

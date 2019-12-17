@@ -20,12 +20,12 @@ Die Speech-React Bibliothek benötigt das Speech-Framework, welches unter [https
 
 Um in eigenen Projekten Speech-React nutzen zu können, muss das Speech-Framework NPM-Package von der [LinguaLogic-Seite](https://lingualogic.de) heruntergeladen werden, in den eigenen Projektordner kopiert werden und vor Speech-React installiert sein. Das Speech-Framework NPM-Package wird mit folgendem Befehl installiert:
 
-    $ npm install speech-framework-0.5.15.tgz
+    $ npm install speech-framework-0.5.16.tgz
 
 
 ## Letzte Version
 
-* 0.5.15.0008 Beta vom 19.10.2019 [Release Notizen](./CHANGELOG.md)
+* 0.5.16.0009 Beta vom 17.12.2019 [Release Notizen](./CHANGELOG.md)
 
 Wir empfehlen für neue React-Projekte die Verwendung von Typescript, ansonsten kann Speech-React auch mit JavaScript verwendet werden.
 
@@ -72,6 +72,7 @@ Zuerst muss das Speech-React Github-Repsitory unter [https://github.com/lingualo
 
     $ git clone https://github.com/lingualogic/speech-react
     $ cd speech-react
+    $ git checkout 0.5.x
 
 danach werden alle NPM-Pakete für Speech-React mit folgendem Befehl installiert:
 
@@ -89,11 +90,11 @@ Die API-Dokumentation kann mit folgenden Befehl in docs/api erzeugt werden:
 
     $ npm run docs
 
-Das im dist/ Ordner erzeugte npm-Paket 'speech-react-0.5.15.tgz' kann in den eigenen React Projektordner kopiert werden.
+Das im dist/ Ordner erzeugte npm-Paket 'speech-react-0.5.16.tgz' kann in den eigenen React Projektordner kopiert werden.
 
-Die Installation des 'speech-react-0.5.15.tgz' npm-Paketes erfolgt im eigenen React Projektordner mit folgendem Befehl:
+Die Installation des 'speech-react-0.5.16.tgz' npm-Paketes erfolgt im eigenen React Projektordner mit folgendem Befehl:
 
-    $ npm install speech-react-0.5.15.tgz
+    $ npm install speech-react-0.5.16.tgz
 
 Danach kann Speech-React im eigenen React-Projekt verwendet werden. 
 
@@ -105,6 +106,11 @@ Alternativ kann das fertige Speech-React npm-Paket auch von der [LinguaLogic-Web
 Speech-React kann mit folgendem Befehl wieder deinstalliert werden:
 
     $ npm uninstall speech-react
+
+
+## gebrochener Code gegenüber der Vorversion
+
+* wird das Google-Module eingebunden, muss jetzt auch der Parameter googleServerUrl bei den googleCredentials eingetragen und der Konfiguration mitübergeben werden.
 
 
 ## Bekannte Probleme

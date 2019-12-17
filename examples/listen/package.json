@@ -1,6 +1,6 @@
 {
   "name": "listenapp",
-  "version": "0.5.15",
+  "version": "0.5.16",
   "productName": "ListenApp",
   "description": "ListenApp",
   "author": "LinguaLogic Team",
@@ -13,7 +13,7 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "speech-react": "file:../../dist/speech-react-0.5.15.tgz"
+    "speech-react": "file:../../dist/speech-react-0.5.16.tgz"
   },
   "eslintConfig": {
     "extends": "react-app"

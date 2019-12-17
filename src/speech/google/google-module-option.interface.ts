@@ -1,10 +1,10 @@
 /**
  * GoogleModuleOption Schnittstelle
  *
- * API-Version: 1.0
- * Datum:       09.05.2019
+ * API-Version: 1.1
+ * Datum:       17.12.2019
  *
- * Letzte Aenderung: 09.05.2019
+ * Letzte Aenderung: 17.12.2019
  * Status: rot
  *
  * @module speech/google
@@ -21,6 +21,8 @@ export interface GoogleModuleOptionInterface {
     googleDynamicCredentialsFlag?: boolean;
     /** legt den AppKey fuer die Verbindung zum Server fest */
     googleAppKey?: string;
+    /** legt die URL fuer den Google Tokenserver fest */
+    googleServerUrl?: string;
     /** legt fest, ob Port oder Mock geladen werden */
     googleMockFlag?: boolean;
     /** legt die URL fuer die Verbindung zum Dialogflow-TokenServer fest */

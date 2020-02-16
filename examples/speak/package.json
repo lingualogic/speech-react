@@ -1,6 +1,6 @@
 {
   "name": "speakapp",
-  "version": "0.5.16",
+  "version": "0.5.17",
   "productName": "SpeakApp",
   "description": "SpeakApp",
   "author": "LinguaLogic Team",
@@ -13,7 +13,7 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "speech-react": "file:../../dist/speech-react-0.5.16.tgz"
+    "speech-react": "file:../../dist/speech-react-0.5.17.tgz"
   },
   "eslintConfig": {
     "extends": "react-app"

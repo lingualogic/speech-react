@@ -20,12 +20,12 @@ Die Speech-React Bibliothek benötigt das Speech-Framework, welches unter [https
 
 Um in eigenen Projekten Speech-React nutzen zu können, muss das Speech-Framework NPM-Package von der [LinguaLogic-Seite](https://lingualogic.de) heruntergeladen werden, in den eigenen Projektordner kopiert werden und vor Speech-React installiert sein. Das Speech-Framework NPM-Package wird mit folgendem Befehl installiert:
 
-    $ npm install speech-framework-0.5.17.tgz
+    $ npm install speech-framework-0.5.18.tgz
 
 
 ## Letzte Version
 
-* 0.5.17.0010 Release vom 16.02.2020 [Release Notizen](./CHANGELOG.md)
+* 0.5.18.0011 Release vom 28.03.2020 [Release Notizen](./CHANGELOG.md)
 
 Wir empfehlen für neue React-Projekte die Verwendung von Typescript, ansonsten kann Speech-React auch mit JavaScript verwendet werden.
 
@@ -68,6 +68,17 @@ Will man den Clouddienst verwenden, muss ein eigener Account eingerichtet werden
 
 ## Installation
 
+Die Installation kann vom globalen NPM-Repository aus erfolgen, oder als lokale Installation erzeugt man sich sein NPM-Package selbst.
+
+### NPM-Package
+
+Zur Installation von Speech-React ins eigene Projekt, im Projektverzeichnis folgenden Befehl eingeben:
+
+    $ npm install speech-react
+
+
+### lokales Package
+
 Zuerst muss das Speech-React Github-Repsitory unter [https://github.com/lingualogic/speech-react](https://github.com/lingualogic/speech-react) mit folgendem Befehl geklont werden:
 
     $ git clone https://github.com/lingualogic/speech-react
@@ -89,13 +100,13 @@ Die API-Dokumentation kann mit folgenden Befehl in docs/api erzeugt werden:
 
     $ npm run docs
 
-Das im dist/ Ordner erzeugte npm-Paket 'speech-react-0.5.16.tgz' kann in den eigenen React Projektordner kopiert werden.
+Das im dist/ Ordner erzeugte npm-Paket 'speech-react-0.5.18.tgz' kann in den eigenen React Projektordner kopiert werden.
 
-Die Installation des 'speech-react-0.5.16.tgz' npm-Paketes erfolgt im eigenen React Projektordner mit folgendem Befehl:
+Die Installation des 'speech-react-0.5.18.tgz' npm-Paketes erfolgt im eigenen React Projektordner mit folgendem Befehl:
 
-    $ npm install speech-react-0.5.16.tgz
+    $ npm install speech-react-0.5.18.tgz
 
-Danach kann Speech-React im eigenen React-Projekt verwendet werden. 
+Danach kann Speech-React im eigenen React-Projekt verwendet werden.
 
 Alternativ kann das fertige Speech-React npm-Paket auch von der [LinguaLogic-Webseite](https://lingualogic.de) heruntergeladen werden.
 

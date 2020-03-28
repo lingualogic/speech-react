@@ -32,6 +32,13 @@ module.exports = ({ gulp }) => {
     // Test Funktionen
 
 
+    /** 
+     * Installationstext des veroeffentlichten NPM-Packages
+     */
+
+    gulp.task('test-install', shell.task('cd test && npm install ./../dist/speech-react-0.5.18.tgz'));
+
+
     /**
      * Start aller Jest Unit-Tests
      */

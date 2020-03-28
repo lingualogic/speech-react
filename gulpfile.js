@@ -134,6 +134,31 @@ gulp.task('build', function(callback) {
  * Erzeugt die lauffaehige Speech-Angular Bibliothek speech-angular.js aus dem API-Quellcode
  */
 
+gulp.task('build-npm', function(callback) {
+    runSequence(
+        'build',
+        'test-install',
+        'dist-build',
+        callback);
+});
+
+
+/**
+ * Erzeugt die lauffaehige Speech-Angular Bibliothek speech-angular.js aus dem API-Quellcode
+ */
+
+gulp.task('publish-npm', function(callback) {
+    runSequence(
+        'build-npm',
+        'dist-publish',
+        callback);
+});
+
+
+/**
+ * Erzeugt die lauffaehige Speech-Angular Bibliothek speech-angular.js aus dem API-Quellcode
+ */
+
 gulp.task('build-examples', function(callback) {
     runSequence(
         'test-examples-unit',

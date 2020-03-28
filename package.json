@@ -1,6 +1,6 @@
 {
     "name": "speech-react",
-    "version": "0.5.17",
+    "version": "0.5.18",
     "description": "Speech-React",
     "author": "LinguaLogic Team",
     "license": "MIT",
@@ -11,6 +11,8 @@
         "start": "react-scripts start",
         "build": "gulp build",
         "build:app": "react-scripts build",
+        "build:npm": "gulp build-npm",
+        "publish:npm": "gulp publish-npm",
         "test": "react-scripts test",
         "speak": "cd examples/speak && npm install && npm start",
         "listen": "cd examples/listen && npm install && npm start"
@@ -22,7 +24,7 @@
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
         "rxjs": "^6.5.2",
-        "speech-framework": "file:speech-framework-0.5.17.tgz"
+        "speech-framework": "file:speech-framework-0.5.18.tgz"
         },
     "devDependencies": {
         "@types/jasmine": "^3.3.12",

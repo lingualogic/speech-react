@@ -1,0 +1,13 @@
+{
+  "name": "speech-test",
+  "version": "0.5.18",
+  "description": "SpeechTest",
+  "author": "Lingualogic Team",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {}
+}

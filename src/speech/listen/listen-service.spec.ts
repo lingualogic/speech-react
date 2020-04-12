@@ -1,7 +1,7 @@
 /**
  * Unit-Test von ListenService
  *
- * Letzter Aenderung: 23.01.2019
+ * Letzter Aenderung: 01.04.2020
  * Status: gelb
  *
  * getestet unter:  Chrome(Mac)
@@ -306,6 +306,17 @@ describe('ListenService', () => {
             expect( listenService.startEvent ).toBeTruthy();
             expect( listenService.stopEvent ).toBeTruthy();
             expect( listenService.errorEvent ).toBeTruthy();
+            expect( listenService.resultEvent ).toBeTruthy();
+            expect( listenService.interimResultEvent ).toBeTruthy();
+            expect( listenService.noMatchEvent ).toBeTruthy();
+            expect( listenService.recognitionStartEvent ).toBeTruthy();
+            expect( listenService.recognitionStopEvent ).toBeTruthy();
+            expect( listenService.audioStartEvent ).toBeTruthy();
+            expect( listenService.audioStopEvent ).toBeTruthy();
+            expect( listenService.soundStartEvent ).toBeTruthy();
+            expect( listenService.soundStopEvent ).toBeTruthy();
+            expect( listenService.speechStartEvent ).toBeTruthy();
+            expect( listenService.speechStopEvent ).toBeTruthy();
         });
 
     });
@@ -394,7 +405,52 @@ describe('ListenService', () => {
             expect(listenService.init()).toBe( 0 );
             expect( listenService.start()).toBe( 0 );
             if ( LISTEN_MOCK_TEST ) {
-                const testResult = listenService.test( 'say', { sayText: 'Dies ist ein Testtext' });
+                const testResult = listenService.test( 'say', { sayText: 'Dies ist ein Testtext', isFinal: true });
+                if ( testResult.result !== 0 ) {
+                    console.log('===> Testausgabe.resultEvent', testResult.errorText);
+                }
+            } else {
+                // TODO: Hier muss eine Audiodatei abgespielt werden, wenn Audio als Service vorhande ist
+                done.fail('Der Test ist nicht implementiert');
+            }
+        });
+
+    });
+
+    // interimResultEvent
+
+    // TODO: Ausbau von Coti, um nicht finale Nachrichten zu verarbeiten
+    xdescribe('Funktion interimResultEvent', () => {
+
+        it('sollte gueltigen Text als Ergebnis der Spracherkennung zurueckgeben', (done) => {
+            let interimResultEvent = null;
+            let stopEvent = null;
+            const errorEvent = listenService.errorEvent.subscribe((aError: any) => {
+                errorEvent.unsubscribe();
+                interimResultEvent.unsubscribe();
+                stopEvent.unsubscribe();
+                console.log('===> ListenServiceSpec.resultEvent: Error=', aError.message);
+                done();
+                return 0;
+            });
+            let resultText = '';
+            interimResultEvent = listenService.interimResultEvent.subscribe((aResultText: string) => {
+                interimResultEvent.unsubscribe();
+                resultText = aResultText;
+                return 0;
+            });
+            stopEvent = listenService.stopEvent.subscribe(() => {
+                errorEvent.unsubscribe();
+                interimResultEvent.unsubscribe();
+                stopEvent.unsubscribe();
+                expect( resultText ).toBe( 'Dies ist ein Testtext' );
+                done();
+                return 0;
+            });
+            expect( listenService.init()).toBe( 0 );
+            expect( listenService.start()).toBe( 0 );
+            if ( LISTEN_MOCK_TEST ) {
+                const testResult = listenService.test( 'say', { sayText: 'Dies ist ein Testtext', isFinal: false });
                 if ( testResult.result !== 0 ) {
                     console.log('===> Testausgabe.resultEvent', testResult.errorText);
                 }

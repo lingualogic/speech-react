@@ -20,12 +20,18 @@ Die Speech-React Bibliothek benötigt das Speech-Framework, welches unter [https
 
 Um in eigenen Projekten Speech-React nutzen zu können, muss das Speech-Framework NPM-Package von der [LinguaLogic-Seite](https://lingualogic.de) heruntergeladen werden, in den eigenen Projektordner kopiert werden und vor Speech-React installiert sein. Das Speech-Framework NPM-Package wird mit folgendem Befehl installiert:
 
-    $ npm install speech-framework-0.5.18.tgz
+    $ npm install speech-framework-0.5.19.tgz
+
+Alternativ kann das Speech-Framework auch über das offizielle globale NPM-Repository installiert werden:
+
+    $ npm install speech-framework
+
+Wird speech-react aus dem globalen NPM-Repository installert, wird speech-framework automatisch mitinstalliert.
 
 
 ## Letzte Version
 
-* 0.5.18.0011 Release vom 28.03.2020 [Release Notizen](./CHANGELOG.md)
+* 0.5.19.0012 Release vom 11.04.2020 [Release Notizen](./CHANGELOG.md)
 
 Wir empfehlen für neue React-Projekte die Verwendung von Typescript, ansonsten kann Speech-React auch mit JavaScript verwendet werden.
 
@@ -76,6 +82,7 @@ Zur Installation von Speech-React ins eigene Projekt, im Projektverzeichnis folg
 
     $ npm install speech-react
 
+Installiert man speech-react auf diese Art, wird speech-framework automatisch mitinstalliert.
 
 ### lokales Package
 
@@ -100,11 +107,11 @@ Die API-Dokumentation kann mit folgenden Befehl in docs/api erzeugt werden:
 
     $ npm run docs
 
-Das im dist/ Ordner erzeugte npm-Paket 'speech-react-0.5.18.tgz' kann in den eigenen React Projektordner kopiert werden.
+Das im dist/ Ordner erzeugte npm-Paket 'speech-react-0.5.19.tgz' kann in den eigenen React Projektordner kopiert werden.
 
-Die Installation des 'speech-react-0.5.18.tgz' npm-Paketes erfolgt im eigenen React Projektordner mit folgendem Befehl:
+Die Installation des 'speech-react-0.5.19.tgz' npm-Paketes erfolgt im eigenen React Projektordner mit folgendem Befehl:
 
-    $ npm install speech-react-0.5.18.tgz
+    $ npm install speech-react-0.5.19.tgz
 
 Danach kann Speech-React im eigenen React-Projekt verwendet werden.
 

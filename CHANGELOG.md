@@ -1,6 +1,13 @@
 # Speech-React Release Notizen
 
 
+## 0.5.19.0012 Release (11.04.2020)
+
+### Features
+
+* **Listen:** Einbau eines Dicate-Mode in die HTML5-ASR für das Diktieren von Texten (nur Chrome-Browser).
+              Einbau von Mkrofon-Events in Listen zur Anzeige, wann das Mikrofon an und aus geht.
+
 
 ## 0.5.18.0011 Release (28.03.2020)
 

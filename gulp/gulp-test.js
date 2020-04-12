@@ -36,7 +36,7 @@ module.exports = ({ gulp }) => {
      * Installationstext des veroeffentlichten NPM-Packages
      */
 
-    gulp.task('test-install', shell.task('cd test && npm install ./../dist/speech-react-0.5.18.tgz'));
+    gulp.task('test-install', shell.task('cd test && npm install ./../dist/speech-react-0.5.19.tgz'));
 
 
     /**

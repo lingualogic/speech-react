@@ -1,7 +1,7 @@
 {
     "name": "speech-react-app",
     "displayName": "SpeechReactApp",
-    "version": "0.5.18",
+    "version": "0.5.19",
     "description": "Test-App fuer Speech-React SDK",
     "main": "index.js",
     "scripts": {

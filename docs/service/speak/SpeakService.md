@@ -5,16 +5,16 @@ Der SpeakService dient zur Sprachsynthese von Texten und zum Abspielen von Audio
 
 ## Architektur
 
-In der folgenden Grafik werden die einzelnen Schichten, angefangen von der ReactApp, über den ServiceManager und den SpeakService von Speech-React, die Speak-Komponente in Speech-Framework, die Plugins für TTS (Text-to-Speech) und AudioPlayer, bis hinunter zu den Standardschnittstellen des Browsers für SpeechSynthesis und Audio, sowie dem Amazon Polly Server, dargestellt. 
+In der folgenden Grafik werden die einzelnen Schichten, angefangen von der ReactApp, über den ServiceManager und den SpeakService von Speech-React, die Speak-Komponente in Speech-Framework, die Plugins für TTS (Text-to-Speech) und AudioPlayer, bis hinunter zu den Standardschnittstellen des Browsers für SpeechSynthesis und Audio, sowie dem Amazon Polly Server Google Server und Microsoft Server, dargestellt. 
 
 
 ![SpeakService-Architektur](SpeakService-1.gif)
 
 
-Ganz oben sind die für den SpeakService notwendigen Amazon-Credentials dargestellt, die der ReactApp übergeben werden müssen, wenn Amazon als TTS zum Einsatz kommen soll. Eine Anleitung für die Erstellung der Amazon-Credentials und die Einbindung des AmazonModule in die ReactApp zur Aktivierung des Amazon Cloud-Service findet man unter [docs/cloud/amazon/Amazon.md](./../../cloud/amazon/Amazon.md)
+Ganz oben sind die für den SpeakService notwendigen Credentials dargestellt, die der ReactApp übergeben werden müssen, wenn ein Cloud-Dienst als TTS zum Einsatz kommen soll. Eine Anleitung für die Erstellung der Credentials und die Einbindung der Cloud-Module in die ReactApp zur Aktivierung des jeweiligen Cloud-Service findet man unter [docs/cloud/Cloud.md](./../../cloud/Cloud.md)
 
-Die nächste Grafik zeigt die konkrete Vererbungsbeziehung zu BaseService, sowie die Einbindung von SpeakFactory und SpeakInterface aus dem Speech-Framework. SpeakFactory ist eine statische Klasse und erzeugt das Speak-Objekt zum SpeakInterface. Auf der linken Seite ist das AmazonModule dargestellt, welches als statische Klasse implementiert ist und das Amazon Singleton aus dem Speech-Framework einbindet.
-Damit Amazon funktioniert, müssen die Amazon-Credentials vom AmazonModule an das Amazon Singleton weitergereicht werden. 
+Die nächste Grafik zeigt die konkrete Vererbungsbeziehung zu BaseService, sowie die Einbindung von SpeakFactory und SpeakInterface aus dem Speech-Framework. SpeakFactory ist eine statische Klasse und erzeugt das Speak-Objekt zum SpeakInterface. Auf der linken Seite sind die Cloud-Module dargestellt, welche als statische Klassen implementiert sind und die Cloud-Singletons (Amazon, Google und Microsoft) aus dem Speech-Framework einbinden.
+Damit die Cloud-Dienste funktionieren, müssen die Credentials von den Cloud-Modulen an die Cloud-Singletons weitergereicht werden. 
 
 
 ![SpeakService-Struktur](SpeakService-2.gif)
@@ -39,7 +39,11 @@ Dazu müssen das Spech-Framework und das Speech-React npm-Paket in der gleichen 
 	$ npm install speech-framework-<version>.tgz
 	$ npm install speech-react-<version>.tgz
 	 
+Alternativ kann man Speech-React aus dem globalen NPM-Repository installieren. Dann wird Speech-Framework automatisch mitinstalliert.
 
+	$ npm install speech-react	
+	
+	
 ## Konfiguration
 
 Dier erste Aufgabe vor Nutzung des SpeakService besteht in der Festlegung der Konfiguration vor der Erzeugung des Services in React. In der Defaulteinstellung wird die init()-Funktion im Konstruktor aufgerufen und die voreingestellte Konfiguration übernommen. Will man die Defaultkonfiguration überschreiben, holt man sie sich mittels der Klassenfunktion SpeakService.getConfig(). Diese Funktion gibt das SpeakConfig-Objekt des SpeakServices zurück. 

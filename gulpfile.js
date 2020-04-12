@@ -137,7 +137,7 @@ gulp.task('build', function(callback) {
 gulp.task('build-npm', function(callback) {
     runSequence(
         'build',
-        'test-install',
+        // 'test-install',
         'dist-build',
         callback);
 });

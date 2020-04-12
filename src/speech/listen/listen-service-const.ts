@@ -38,3 +38,9 @@ export const LISTEN_NUANCE_ASR = 'ASRNuance'; // deprecated
 
 export const LISTEN_DE_LANGUAGE = 'de';
 export const LISTEN_EN_LANGUAGE = 'en';
+
+
+// Modus-Konstanten fuer Command und Dictate
+
+export const LISTEN_COMMAND_MODE = 'Command';
+export const LISTEN_DICTATE_MODE = 'Dictate';

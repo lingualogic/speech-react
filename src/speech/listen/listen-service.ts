@@ -1,10 +1,10 @@
 /**
  * ListenService fuer die Integration von Listen in Angular
  *
- * API-Version: 1.1
- * Datum:       21.02.2019
+ * API-Version: 1.3
+ * Datum:       09.04.2020
  *
- * Letzte Aenderung: 28.02.2019
+ * Letzte Aenderung: 09.04.2020
  * Status: gelb
  *
  * @module speech/listen
@@ -74,6 +74,16 @@ export class ListenService extends BaseService {
     // Service-Events
 
     private mListenResultEvent = new EventEmitter<any>( LISTEN_ASYNC_EVENT );
+    private mListenInterimResultEvent = new EventEmitter<any>( LISTEN_ASYNC_EVENT );
+    private mListenNoMatchEvent = new EventEmitter<any>( LISTEN_ASYNC_EVENT );
+    private mListenRecognitionStartEvent = new EventEmitter<any>( LISTEN_ASYNC_EVENT );
+    private mListenRecognitionStopEvent = new EventEmitter<any>( LISTEN_ASYNC_EVENT );
+    private mListenAudioStartEvent = new EventEmitter<any>( LISTEN_ASYNC_EVENT );
+    private mListenAudioStopEvent = new EventEmitter<any>( LISTEN_ASYNC_EVENT );
+    private mListenSoundStartEvent = new EventEmitter<any>( LISTEN_ASYNC_EVENT );
+    private mListenSoundStopEvent = new EventEmitter<any>( LISTEN_ASYNC_EVENT );
+    private mListenSpeechStartEvent = new EventEmitter<any>( LISTEN_ASYNC_EVENT );
+    private mListenSpeechStopEvent = new EventEmitter<any>( LISTEN_ASYNC_EVENT );
 
 
     /**
@@ -254,6 +264,56 @@ export class ListenService extends BaseService {
             return 0;
         });
 
+        this.mListen.addListenInterimResultEvent( aServiceName, (aResult: string) => {
+            this.mListenInterimResultEvent.emit(aResult);
+            return 0;
+        });
+
+        this.mListen.addListenNoMatchEvent( aServiceName, () => {
+            this.mListenNoMatchEvent.emit();
+            return 0;
+        });
+
+        this.mListen.addListenRecognitionStartEvent( aServiceName, () => {
+            this.mListenRecognitionStartEvent.emit();
+            return 0;
+        });
+
+        this.mListen.addListenRecognitionStopEvent( aServiceName, () => {
+            this.mListenRecognitionStopEvent.emit();
+            return 0;
+        });
+
+        this.mListen.addListenAudioStartEvent( aServiceName, () => {
+            this.mListenAudioStartEvent.emit();
+            return 0;
+        });
+
+        this.mListen.addListenAudioStopEvent( aServiceName, () => {
+            this.mListenAudioStopEvent.emit();
+            return 0;
+        });
+
+        this.mListen.addListenSoundStartEvent( aServiceName, () => {
+            this.mListenSoundStartEvent.emit();
+            return 0;
+        });
+
+        this.mListen.addListenSoundStopEvent( aServiceName, () => {
+            this.mListenSoundStopEvent.emit();
+            return 0;
+        });
+
+        this.mListen.addListenSpeechStartEvent( aServiceName, () => {
+            this.mListenSpeechStartEvent.emit();
+            return 0;
+        });
+
+        this.mListen.addListenSpeechStopEvent( aServiceName, () => {
+            this.mListenSpeechStopEvent.emit();
+            return 0;
+        });
+
         return 0;
     }
 
@@ -267,6 +327,126 @@ export class ListenService extends BaseService {
 
     get resultEvent() {
         return this.mListenResultEvent;
+    }
+
+
+    /**
+     * Ereignis fuer Sprachausgabe erkannten Text
+     *
+     * @readonly
+     * @return {EventEmitter} listenInterimResultEvent
+     */
+
+    get interimResultEvent() {
+        return this.mListenInterimResultEvent;
+    }
+
+
+    /**
+     * Ereignis fuer Sprachausgabe kein erkannter Text
+     *
+     * @readonly
+     * @return {EventEmitter} listenInterimResultEvent
+     */
+
+    get noMatchEvent() {
+        return this.mListenNoMatchEvent;
+    }
+
+
+    /**
+     * Ereignis fuer Start Recognition
+     *
+     * @readonly
+     * @return {EventEmitter} listenRecognitionStartEvent
+     */
+
+    get recognitionStartEvent() {
+        return this.mListenRecognitionStartEvent;
+    }
+
+
+    /**
+     * Ereignis fuer Stop Recognition
+     *
+     * @readonly
+     * @return {EventEmitter} listenRecognitionStopEvent
+     */
+
+    get recognitionStopEvent() {
+        return this.mListenRecognitionStopEvent;
+    }
+
+
+    /**
+     * Ereignis fuer Start Audio
+     *
+     * @readonly
+     * @return {EventEmitter} listenAudioStartEvent
+     */
+
+    get audioStartEvent() {
+        return this.mListenAudioStartEvent;
+    }
+
+
+    /**
+     * Ereignis fuer Stop Audio
+     *
+     * @readonly
+     * @return {EventEmitter} listenAudioStopEvent
+     */
+
+    get audioStopEvent() {
+        return this.mListenAudioStopEvent;
+    }
+
+
+    /**
+     * Ereignis fuer Start Sound
+     *
+     * @readonly
+     * @return {EventEmitter} listenSoundStartEvent
+     */
+
+    get soundStartEvent() {
+        return this.mListenSoundStartEvent;
+    }
+
+
+    /**
+     * Ereignis fuer Stop Sound
+     *
+     * @readonly
+     * @return {EventEmitter} listenSoundStopEvent
+     */
+
+    get soundStopEvent() {
+        return this.mListenSoundStopEvent;
+    }
+
+
+    /**
+     * Ereignis fuer Start Speech
+     *
+     * @readonly
+     * @return {EventEmitter} listenSpeechStartEvent
+     */
+
+    get speechStartEvent() {
+        return this.mListenSpeechStartEvent;
+    }
+
+
+    /**
+     * Ereignis fuer Stop Speech
+     *
+     * @readonly
+     * @return {EventEmitter} listenSpeechStopEvent
+     */
+
+    get speechStopEvent() {
+        return this.mListenSpeechStopEvent;
     }
 
 
@@ -284,6 +464,7 @@ export class ListenService extends BaseService {
         }
         return this.mListen.isASR();
     }
+
 
     /**
      * ASR fuer die Spracheingabe einstellen
@@ -364,6 +545,27 @@ export class ListenService extends BaseService {
 
     get asrs(): Array<string> {
         return this.getASRList();
+    }
+
+
+    // Timeout-Funktionen
+
+
+    /**
+     * Timeout fuer die Spracheingabe einstellen
+     *
+     * @param {number} aTimeout - einzustellender Timeout in Millisekunden
+     *
+     * @return {number} Fehlercode 0 oder -1
+     */
+
+    setTimeout( aTimeout: number ): number {
+        // console.log('ListenService.setTimeout:', aTimeout);
+        if ( !this.mListen ) {
+            this._error('setTimeout', 'keine Listen-Komponente vorhanden');
+            return -1;
+        }
+        return this.mListen.setTimeout( aTimeout );
     }
 
 
@@ -448,6 +650,137 @@ export class ListenService extends BaseService {
 
     get languages(): Array<string> {
         return this.getLanguageList();
+    }
+
+
+    // Mode-Funktionen
+
+
+    /**
+     * Eingabemodus fuer die Spracheingabe pruefen
+     *
+     * @param {string} aMode - einzustellender Modus ('Command' oder 'Dictate')
+     *
+     * @return {number} True, wenn uebergebener Mode gueltig ist, sonst False
+     */
+
+    isMode( aMode: string ): boolean {
+        if ( !this.mListen ) {
+            this._error('isMode', 'keine Listen-Komponente vorhanden');
+            return false;
+        }
+        return this.mListen.isMode( aMode );
+    }
+
+
+    /**
+     * pruefen ob Eingabemodus Command fuer die Spracheingabe eingestellt ist
+     *
+     * @return {number} True, wenn Command Modus eingestellt ist, sonst False
+     */
+
+    isCommandMode(): boolean {
+        if ( !this.mListen ) {
+            this._error('isMode', 'keine Listen-Komponente vorhanden');
+            return false;
+        }
+        return this.mListen.isCommandMode();
+    }
+
+
+    /**
+     * pruefen ob Eingabemodus Dictate fuer die Spracheingabe eingestellt ist
+     *
+     * @return {number} True, wenn Dictate Modus eingestellt ist, sonst False
+     */
+
+    isDictateMode(): boolean {
+        if ( !this.mListen ) {
+            this._error('isMode', 'keine Listen-Komponente vorhanden');
+            return false;
+        }
+        return this.mListen.isDictateMode();
+    }
+
+
+    /**
+     * Eingabemodus fuer die Spracheingabe einstellen
+     *
+     * @param {string} aMode - einzustellender Modus ('Command' oder 'Dictate')
+     *
+     * @return {number} Fehlercode 0 oder -1
+     */
+
+    setMode( aMode: string ): number {
+        if ( !this.mListen ) {
+            this._error('setMode', 'keine Listen-Komponente vorhanden');
+            return -1;
+        }
+        return this.mListen.setMode( aMode );
+    }
+
+
+    /**
+     * Rueckgabe des eingestellten Eingabemodus
+     *
+     * @return {string} eingestellter Modus ('Command' oder 'Dictate')
+     */
+
+    getMode(): string {
+        if ( !this.mListen ) {
+            this._error('getMode', 'keine Listen-Komponente vorhanden');
+            return '';
+        }
+        return this.mListen.getMode();
+    }
+
+
+    /**
+     * Eigenschaft Modus eintragen fuer die Spracheingabe.
+     *
+     * @param {string} aModeName - Name des Eingabemodus (Command, Dictate)
+     */
+
+    set mode( aModeName: string ) {
+        this.setMode( aModeName );
+    }
+
+
+    /**
+     * Eigenschaft Modus zurueckgeben.
+     *
+     * @return {string} aModeName - Name des Eingabemodus (Command, Dictate)
+     */
+
+    get mode(): string {
+        return this.getMode();
+    }
+
+
+    /**
+     * Liste aller verfuegbaren Eingabemodi (Command, Dictate) zurueckgeben
+     *
+     * @return {Array<string>} Liste der Eingabemodi zurueckgeben (Command, Dictate) oder leere Liste
+     */
+
+    getModeList(): Array<string> {
+        if ( !this.mListen ) {
+            this._error('getModeList', 'keine Listen-Komponente vorhanden');
+            return [];
+        }
+        return this.mListen.getModeList();
+    }
+
+
+    /**
+     * Eigenschaft alle verfuegbaren Modi (Command, Dictate) zurueckgeben
+     *
+     * @return {Array<string>} Liste Kurzform der Sprache zurueckgeben (de, en)
+     */
+
+
+    get modes(): Array<string> {
+        return this.getModeList();
     }
 
 

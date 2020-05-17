@@ -12,8 +12,8 @@
  */
 
 
- // extern
- 
+// extern
+
 
 
 
@@ -26,7 +26,7 @@ import { AmazonModuleConfigInterface } from './amazon-module-config.interface';
 
 export class AmazonService {
 
-    
+
     /**
      * Dummy-Initfunktion fuer Service-Manager
      *
@@ -50,7 +50,7 @@ export class AmazonService {
             amazonRegion: aRegion,
             amazonIdentityPoolId: aIdentityPoolId
         };
-        console.log('AmazonService.setCredentials:', configData);
+        // console.log('AmazonService.setCredentials:', configData);
         return AmazonModule.setConfig( configData );
     }
 

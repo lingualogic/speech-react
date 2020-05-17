@@ -6,7 +6,7 @@
 const gulp = require('gulp');
 const path = require('path');
 const childProcess = require('child_process');
-const runSequence = require('run-sequence');
+const runSequence = require('gulp4-run-sequence');
 const shell = require('gulp-shell');
 
 

@@ -8,7 +8,7 @@
 // Module definieren
 
 const typedoc = require('gulp-typedoc');
-const runSequence = require('run-sequence');
+const runSequence = require('gulp4-run-sequence');
 
 
 module.exports = ({ gulp, srcDir, docsDir, distDir }) => {

@@ -45,6 +45,7 @@ export class MicrosoftModule {
      * @param {boolean} aErrorOutputFlag - bestimmt die Ausgabe von Fehlermeldungen
      */
 
+    // tslint:disable-next-line: max-line-length
     static init( aMicrosoftOption: MicrosoftModuleOptionInterface, aCallback?: (aMicrosoftFlag: boolean) => void, aErrorOutputFlag = false ): void {
         // Fehlerausgabe einstellen
         if ( aErrorOutputFlag ) {
@@ -99,7 +100,7 @@ export class MicrosoftModule {
      */
 
     static setConfig( aConfigData: MicrosoftModuleConfigInterface ): number {
-        console.log('MicrosoftModule.setConfig:', aConfigData);
+        // console.log('MicrosoftModule.setConfig:', aConfigData);
         return Microsoft.setConfig( aConfigData );
     }
 

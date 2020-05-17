@@ -99,7 +99,7 @@ export class GoogleModule {
      */
 
     static setConfig( aConfigData: GoogleModuleConfigInterface ): number {
-        console.log('GoogleModule.setConfig:', aConfigData);
+        // console.log('GoogleModule.setConfig:', aConfigData);
         return Google.setConfig( aConfigData );
     }
 

@@ -41,7 +41,7 @@ export class GoogleService {
     /**
      * Uebergabe der Google-Credentials
      *
-     * @param aAppKey - Google 
+     * @param aAppKey - Google
      * @param aServerUrl - Google Server/Tokenserver URL
      * @param aDialogflowTokenserverUrl - Dialogflow Tokenserver URL fuer Dialogflow V2
      * @param aDialogflowProjectId - DialogFlow Projektname
@@ -54,7 +54,7 @@ export class GoogleService {
             dialogflowTokenServerUrl: aDialogflowTokenServerUrl,
             dialogflowProjectId: aDialogflowProjectId
         };
-        console.log('GoogleService.setCredentials:', configData);
+        // console.log('GoogleService.setCredentials:', configData);
         return GoogleModule.setConfig( configData );
     }
 

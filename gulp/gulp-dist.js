@@ -11,7 +11,7 @@
 const shell = require('gulp-shell');
 const del = require('del');
 const replace = require('gulp-replace');
-const runSequence = require('run-sequence');
+const runSequence = require('gulp4-run-sequence');
 
 
 module.exports = ({ gulp, docsDir, bundleDir, srcSpeechDir, buildDir, buildSpeechDir, distDir }) => {
@@ -38,7 +38,7 @@ module.exports = ({ gulp, docsDir, bundleDir, srcSpeechDir, buildDir, buildSpeec
             `${buildSpeechDir}/index.js`,
             `${buildSpeechDir}/index.d.ts`,
             `${buildDir}/speech-react.js`,
-            `${srcSpeechDir}/speech-service-version.json`
+            // `${srcSpeechDir}/speech-service-version.json`
         ])
             .pipe( gulp.dest( distDir ));
     });
@@ -284,7 +284,7 @@ module.exports = ({ gulp, docsDir, bundleDir, srcSpeechDir, buildDir, buildSpeec
 
     gulp.task('dist-copy-bundle', function() {
         return gulp.src([
-            `${bundleDir}/index.js`,
+            // `${bundleDir}/index.js`,
             `${bundleDir}/package.json`,
         ])
             .pipe( gulp.dest( distDir ));

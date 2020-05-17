@@ -50,7 +50,7 @@ export class RasaService {
             rasaServerUrl: aServerUrl,
             rasaAppKey: aAppKey
         };
-        console.log('RasaService.setCredentials:', configData);
+        // console.log('RasaService.setCredentials:', configData);
         return RasaModule.setConfig( configData );
     }
 

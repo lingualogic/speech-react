@@ -25,15 +25,15 @@
 
 
 /**
- * BotCommand-Daten beinhaltet den Namen des Kommandos (ACTION, SPEAK, WAIT) und weitere optionale 
+ * BotCommand-Daten beinhaltet den Namen des Kommandos (ACTION, SPEAK, WAIT) und weitere optionale
  * Parameter.
- * 
+ *
  * ACTION:  action  - Name der auszufuehrenden Funktion
  *          type    - Name des Elementtyps (ButtonOnly z.B)
- *          element - Name des Elementes 
- * 
+ *          element - Name des Elementes
+ *
  * SPEAK:   textId  - Name des auszugebenden Textes/Audiofdatei
- * 
+ *
  * WAIT:    time    - Zeit in Sekunden, die gewartet werden soll
  */
 

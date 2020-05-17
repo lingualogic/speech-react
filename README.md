@@ -20,7 +20,7 @@ Die Speech-React Bibliothek benötigt das Speech-Framework, welches unter [https
 
 Um in eigenen Projekten Speech-React nutzen zu können, muss das Speech-Framework NPM-Package von der [LinguaLogic-Seite](https://lingualogic.de) heruntergeladen werden, in den eigenen Projektordner kopiert werden und vor Speech-React installiert sein. Das Speech-Framework NPM-Package wird mit folgendem Befehl installiert:
 
-    $ npm install speech-framework-0.5.19.tgz
+    $ npm install speech-framework-0.5.20.tgz
 
 Alternativ kann das Speech-Framework auch über das offizielle globale NPM-Repository installiert werden:
 
@@ -31,7 +31,7 @@ Wird speech-react aus dem globalen NPM-Repository installert, wird speech-framew
 
 ## Letzte Version
 
-* 0.5.19.0012 Release vom 11.04.2020 [Release Notizen](./CHANGELOG.md)
+* 0.5.20.0013 Release vom 17.05.2020 [Release Notizen](./CHANGELOG.md)
 
 Wir empfehlen für neue React-Projekte die Verwendung von Typescript, ansonsten kann Speech-React auch mit JavaScript verwendet werden.
 
@@ -60,7 +60,7 @@ Grundsätzlich ist das Speech-React SDK in Chrome, Firefox, Opera, Safari und Ed
 
 NodeJS muss installiert sein.
 
-* NodeJS >= 10.X (LTS-Version)
+* NodeJS >= 10.X und <= 12.X (LTS-Version)
 
 Als weitere Plattformen können Android und iOS mit Cordova verwendet werden:
 
@@ -107,11 +107,11 @@ Die API-Dokumentation kann mit folgenden Befehl in docs/api erzeugt werden:
 
     $ npm run docs
 
-Das im dist/ Ordner erzeugte npm-Paket 'speech-react-0.5.19.tgz' kann in den eigenen React Projektordner kopiert werden.
+Das im dist/ Ordner erzeugte npm-Paket 'speech-react-0.5.20.tgz' kann in den eigenen React Projektordner kopiert werden.
 
-Die Installation des 'speech-react-0.5.19.tgz' npm-Paketes erfolgt im eigenen React Projektordner mit folgendem Befehl:
+Die Installation des 'speech-react-0.5.20.tgz' npm-Paketes erfolgt im eigenen React Projektordner mit folgendem Befehl:
 
-    $ npm install speech-react-0.5.19.tgz
+    $ npm install speech-react-0.5.20.tgz
 
 Danach kann Speech-React im eigenen React-Projekt verwendet werden.
 

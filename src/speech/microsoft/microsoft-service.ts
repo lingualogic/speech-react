@@ -12,8 +12,8 @@
  */
 
 
- // extern
- 
+// extern
+
 
 
 
@@ -51,7 +51,7 @@ export class MicrosoftService {
             microsoftSubscriptionKey: aSubscriptionKey,
             microsoftLuisEndpoint: aLuisEndpoint
         };
-        console.log('MicrosoftService.setCredentials:', configData);
+        // console.log('MicrosoftService.setCredentials:', configData);
         return MicrosoftModule.setConfig( configData );
     }
 

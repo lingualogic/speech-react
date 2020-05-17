@@ -99,7 +99,7 @@ export class AmazonModule {
      */
 
     static setConfig( aConfigData: AmazonModuleConfigInterface ): number {
-        console.log('AmazonModule.setConfig:', aConfigData);
+        // console.log('AmazonModule.setConfig:', aConfigData);
         return Amazon.setConfig( aConfigData );
     }
 

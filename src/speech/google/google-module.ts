@@ -1,10 +1,10 @@
 /**
  * GoogleModul zur Initialisierung von Google mit den Credentials
  *
- * API-Version: 1.0
- * Datum:       09.05.2019
+ * API-Version: 1.1
+ * Datum:       13.03.2020
  *
- * Letzte Aenderung: 09.05.2019
+ * Letzte Aenderung: 13.06.2020
  * Status: rot
  *
  * @module speech/google

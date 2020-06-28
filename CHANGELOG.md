@@ -1,6 +1,16 @@
 # Speech-React Release Notizen
 
 
+## 0.5.21.14 Release (26.06.2020)
+
+### Features
+
+* **Listen:** Ausbau von Listen, um den NoMatch-Event zu senden.
+* **Google:** In Google Dialogflow wurden Session-Id und EventName eingebaut, um
+              die Versionierung des Sprachmodells und parallele Sessions verschiedener
+              Nutzer zuzulassen.
+
+
 ## 0.5.20.0013 Release (17.05.2020)
 
 ### Features

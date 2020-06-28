@@ -1,10 +1,10 @@
 /**
  * GoogleService zur Aenderung der Credentials
  *
- * API-Version: 1.1
- * Datum:       17.12.2019
+ * API-Version: 1.3
+ * Datum:       20.06.2020
  *
- * Letzte Aenderung: 17.12.2019
+ * Letzte Aenderung: 20.06.2020
  * Status: rot
  *
  * @module speech/google
@@ -45,14 +45,25 @@ export class GoogleService {
      * @param aServerUrl - Google Server/Tokenserver URL
      * @param aDialogflowTokenserverUrl - Dialogflow Tokenserver URL fuer Dialogflow V2
      * @param aDialogflowProjectId - DialogFlow Projektname
+     * @param aDialogflowEnvironmentName - (optional) DialogFlow EnvironmentName
+     * @param aDialogflowSessionId - (optional) DialogFlow Session-ID
      */
 
-    setCredentials( aAppKey: string, aServerUrl: string, aDialogflowTokenServerUrl: string, aDialogflowProjectId: string ): number {
+    setCredentials(
+        aAppKey: string,
+        aServerUrl: string,
+        aDialogflowTokenServerUrl: string,
+        aDialogflowProjectId: string,
+        aDialogflowEnvironmentName = '',
+        aDialogflowSessionId = ''
+    ): number {
         const configData: GoogleModuleConfigInterface = {
             googleAppKey: aAppKey,
             googleServerUrl: aServerUrl,
             dialogflowTokenServerUrl: aDialogflowTokenServerUrl,
-            dialogflowProjectId: aDialogflowProjectId
+            dialogflowProjectId: aDialogflowProjectId,
+            dialogflowSessionId: aDialogflowSessionId,
+            dialogflowEnvironmentName: aDialogflowEnvironmentName
         };
         // console.log('GoogleService.setCredentials:', configData);
         return GoogleModule.setConfig( configData );

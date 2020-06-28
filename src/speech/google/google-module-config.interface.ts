@@ -1,10 +1,10 @@
 /**
  * GoogleModuleConfig-Schnittstelle
  *
- * API-Version: 1.1
- * Datum:       17.12.2019
+ * API-Version: 1.3
+ * Datum:       20.06.2020
  *
- * Letzte Aenderung: 17.12.2019
+ * Letzte Aenderung: 21.06.2020
  * Status: rot
  *
  * @module speech/google
@@ -25,4 +25,8 @@ export interface GoogleModuleConfigInterface {
     dialogflowTokenServerUrl: string;
     /** legt die   ProjektID fuer Dialogflow fest */
     dialogflowProjectId: string;
+    /** legt die SessionID fuer Dialogflow fest */
+    dialogflowSessionId?: string;
+    /** legt fest, ob der Dialogflow-Agent aus Draft oder aus EnvironmentName ausgelesen wird */
+    dialogflowEnvironmentName?: string;
 }

@@ -31,7 +31,7 @@ Wird speech-react aus dem globalen NPM-Repository installert, wird speech-framew
 
 ## Letzte Version
 
-* 0.5.20.0013 Release vom 17.05.2020 [Release Notizen](./CHANGELOG.md)
+* 0.5.20.0014 Release vom 26.06.2020 [Release Notizen](./CHANGELOG.md)
 
 Wir empfehlen für neue React-Projekte die Verwendung von Typescript, ansonsten kann Speech-React auch mit JavaScript verwendet werden.
 

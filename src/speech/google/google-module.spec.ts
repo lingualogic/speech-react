@@ -1,7 +1,7 @@
 /**
  * Unit-Test von GoogleModule
  *
- * Letzter Aenderung: 17.12.2019
+ * Letzter Aenderung: 20.06.2020
  * Status: gelb
  *
  * getestet unter:  Chrome(Mac)
@@ -79,13 +79,17 @@ describe('GoogeModule', () => {
                 googleAppKey: 'testAppKey',
                 googleServerUrl: 'testServerUrl',
                 dialogflowTokenServerUrl: 'testTokenServerUrl',
-                dialogflowProjectId: 'testProjectId'
+                dialogflowProjectId: 'testProjectId',
+                dialogflowSessionId: 'testSessionId',
+                dialogflowEnvironmentName: 'testEnvironmentName'
             };
             const googleOption: GoogleModuleOptionInterface = {
                 googleDynamicCredentialsFlag: false,
                 googleAppKey: 'testAppKey',
                 dialogflowTokenServerUrl: 'testTokenServerUrl',
                 dialogflowProjectId: 'testProjectId',
+                dialogflowSessionId: 'testSessionId',
+                dialogflowEnvironmentName: 'testEnvironmentName',
                 googleMockFlag: GOOGLE_MOCK_FLAG
             };
             GoogleModule.init( googleOption, (aGoogleFlag: boolean) => {
@@ -100,7 +104,9 @@ describe('GoogeModule', () => {
                 googleAppKey: 'testAppKey',
                 googleServerUrl: 'testServerUrl',
                 dialogflowTokenServerUrl: 'testTokenServerUrl',
-                dialogflowProjectId: 'testProjectId'
+                dialogflowProjectId: 'testProjectId',
+                dialogflowSessionId: 'testSessionId',
+                dialogflowEnvironmentName: 'testEnvironmentName'
             };
             const googleOption: GoogleModuleOptionInterface = {
                 googleDynamicCredentialsFlag: true,

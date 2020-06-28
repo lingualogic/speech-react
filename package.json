@@ -1,6 +1,6 @@
 {
     "name": "speech-react",
-    "version": "0.5.20",
+    "version": "0.5.21",
     "description": "Speech-React",
     "author": "LinguaLogic Team",
     "license": "MIT",
@@ -24,7 +24,7 @@
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
         "rxjs": "^6.5.2",
-        "speech-framework": "file:speech-framework-0.5.20.tgz"
+        "speech-framework": "file:speech-framework-0.5.21.tgz"
         },
     "devDependencies": {
         "@types/jasmine": "^3.3.12",

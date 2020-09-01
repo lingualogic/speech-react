@@ -6,6 +6,20 @@ Die Roadmap zeigt die Reihenfolge der Veröffentlichung von Speech-React Version
 ## Veröffentlichte Versionen
 
 
+### August: Version 0.5.22
+
+beinhaltet:
+
+Fehlerbeseitigungen im Google Cloud-Dienst, in Listen und Speak.
+
+
+### Juni: Version 0.5.21
+
+beinhaltet:
+
+* **Google:** Verbesserung der Intent-Anbindung an Dialogflow.
+
+
 ### Mai: Version 0.5.20
 
 beinhaltet:

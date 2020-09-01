@@ -1,6 +1,13 @@
 # Speech-React Release Notizen
 
 
+## 0.5.22.0015 Release (31.08.2020)
+
+### Fix
+
+Fehlerbeseitigung in Google Cloud-Dienst, Speak, Listen und Intent.
+
+
 ## 0.5.21.14 Release (26.06.2020)
 
 ### Features

@@ -4,8 +4,7 @@ import typescript from 'rollup-plugin-typescript2';
 import json from 'rollup-plugin-json';
 import commonjs from 'rollup-plugin-commonjs';
 import nodeResolve from 'rollup-plugin-node-resolve';
-import uglify from 'rollup-plugin-uglify';
-import { minify } from 'uglify-es';
+import { terser } from 'rollup-plugin-terser';
 
 
 // Speech-Angular Version
@@ -90,11 +89,11 @@ export default {
 
         json(),
 
-        uglify({ output: {
+        terser({ output: {
             beautify: readableSourceCode,
             preamble: preambleText,
             quote_style: 3
-        }}, minify),
+        }}),
 
         nodeResolve({
             mainFields: ['module', 'main']

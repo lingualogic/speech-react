@@ -1,6 +1,14 @@
 # Speech-React Release Notizen
 
 
+## 0.5.23.0016 Release (10.07.2021)
+
+### Fix
+
+Aktualisierung aller NPM-Packages.
+Aktualisierung auf React 17.
+
+
 ## 0.5.22.0015 Release (31.08.2020)
 
 ### Fix

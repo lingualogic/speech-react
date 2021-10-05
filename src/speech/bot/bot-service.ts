@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * BotService zur Anbindung des Bot an Angular.
  *
  * API-Version: 1.1

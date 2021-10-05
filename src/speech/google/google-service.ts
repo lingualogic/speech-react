@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * GoogleService zur Aenderung der Credentials
  *
  * API-Version: 1.3

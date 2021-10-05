@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Unit-Test von ListenService
  *
  * Letzter Aenderung: 01.04.2020

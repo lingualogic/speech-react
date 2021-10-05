@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * ActionService Version und Build Konstanten
  *
  * API-Version: 1.0

@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * RasaModul zur Initialisierung von Rasa mit den Credentials
  *
  * API-Version: 1.0

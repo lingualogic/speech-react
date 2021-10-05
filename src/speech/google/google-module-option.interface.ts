@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * GoogleModuleOption Schnittstelle
  *
  * API-Version: 1.3

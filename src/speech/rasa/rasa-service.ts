@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * RasaService zur Aenderung der Credentials
  *
  * API-Version: 1.1

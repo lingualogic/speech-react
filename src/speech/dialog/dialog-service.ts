@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * DialogService zur Anbindung des Dialogs an Angular.
  *
  * API-Version: 1.1

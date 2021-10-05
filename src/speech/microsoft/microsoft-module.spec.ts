@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Unit-Test von MicrosoftModule
  *
  * Letzter Aenderung: 20.06.2019

@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * ListenServiceOption Schnittstelle
  *
  * API-Version: 1.0

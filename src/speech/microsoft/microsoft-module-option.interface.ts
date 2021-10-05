@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * MicrosoftModuleOption Schnittstelle
  *
  * API-Version: 1.1

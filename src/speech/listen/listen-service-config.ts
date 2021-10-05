@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * ListenService Konfiguration, wird in ListenService im Konstruktor verwendet.
  * Werte koennen hier ueberschrieben werden.
  *

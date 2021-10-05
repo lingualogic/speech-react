@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Speak-Service fuer die Integration von Speak in Angular
  *
  * API-Version: 1.3

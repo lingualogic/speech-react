@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * ActionService zur Anbindung der Action-Komponente
  *
  * API-Version: 1.0

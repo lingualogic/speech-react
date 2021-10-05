@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * MicrosoftModul zur Initialisierung von Microsoft mit den Credentials
  *
  * API-Version: 1.0

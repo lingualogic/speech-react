@@ -31,7 +31,7 @@ Wird speech-react aus dem globalen NPM-Repository installert, wird speech-framew
 
 ## Letzte Version
 
-* 0.5.23.0016 Release vom 10.07.2021 [Release Notizen](./CHANGELOG.md)
+* 0.5.23.0016 Release vom 05.10.2021 [Release Notizen](./CHANGELOG.md)
 
 Wir empfehlen für neue React-Projekte die Verwendung von Typescript, ansonsten kann Speech-React auch mit JavaScript verwendet werden.
 
@@ -147,7 +147,7 @@ Speech-React kann mit folgendem Befehl wieder deinstalliert werden:
 
 [**Plattformen**](./docs/platform/README.md)
 
-[**API-Referenz**](https://lingualogic.de/speech-react/docs/latest/api)
+[**API-Referenz**](https://lingualogic.github.io/speech-react/api/index.html)
 
 [**Roadmap**](./docs/roadmap/README.md)
 

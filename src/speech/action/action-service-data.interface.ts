@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Public ActionService AktionData Schnittstelle
  *
  * API-Version: 1.0

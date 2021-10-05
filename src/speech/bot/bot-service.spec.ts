@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Unit-Test von BotService
  *
  * Letzte Aenderung: 23.01.2019

@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * BaseService Konfiguration, wird in BaseService im Konstruktor verwendet.
  * Werte koennen hier ueberschrieben werden.
  *

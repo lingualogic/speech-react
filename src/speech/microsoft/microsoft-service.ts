@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * MicrosoftService zur Aenderung der Credentials
  *
  * API-Version: 1.0

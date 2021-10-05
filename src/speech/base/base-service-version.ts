@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * BaseService Version und Build Konstanten
  *
  * API-Version: 1.0

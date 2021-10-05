@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Unit-Test von SpeakService
  *
  * Letzte Aenderung: 21.02.2019

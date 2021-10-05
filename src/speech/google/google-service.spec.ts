@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Unit-Test von GoogleService
  *
  * Letzter Aenderung: 20.06.2020

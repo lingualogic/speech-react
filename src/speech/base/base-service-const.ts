@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Globale Konstanten fuer BaseService
  *
  * API-Version: 1.0

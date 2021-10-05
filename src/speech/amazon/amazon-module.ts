@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * AmazonModul zur Initialisierung von Amazon mit den Credentials
  *
  * API-Version: 1.0

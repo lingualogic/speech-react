@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Globale Konstanten fuer ListenService
  *
  * API-Version: 1.1

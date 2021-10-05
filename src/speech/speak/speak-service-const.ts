@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Globale Konstanten fuer SpeakService
  *
  * API-Version: 1.2

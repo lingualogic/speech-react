@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Globale Konstanten fuer DialogService
  *
  * API-Version: 1.0

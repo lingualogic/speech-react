@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * IntentServiceOption Schnittstelle
  *
  * API-Version: 1.1

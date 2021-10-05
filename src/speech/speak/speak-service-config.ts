@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * SpeakService Konfiguration, wird in SpeakService im Konstruktor verwendet.
  * Werte koennen hier ueberschrieben werden.
  *

@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Globale Konstanten fuer IntentService
  *
  * API-Version: 1.0

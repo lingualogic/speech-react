@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * GoogleModul zur Initialisierung von Google mit den Credentials
  *
  * API-Version: 1.1

@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * DialogService Konfiguration, wird in DialogService im Konstruktor verwendet.
  * Werte koennen hier ueberschrieben werden.
  *

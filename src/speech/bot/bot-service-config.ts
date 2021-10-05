@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * BotService Konfiguration, wird in BotService im Konstruktor verwendet.
  * Werte koennen hier ueberschrieben werden.
  *

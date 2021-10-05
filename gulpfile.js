@@ -84,7 +84,6 @@ const settings = {
 // Gulp-Skripte
 
 require('./gulp/gulp-install')(settings);
-require('./gulp/gulp-docs')(settings);
 require('./gulp/gulp-dist')(settings);
 require('./gulp/gulp-test')(settings);
 require('./gulp/gulp-cordova')(settings);
@@ -120,7 +119,6 @@ gulp.task('build', function(callback) {
     runSequence(
         // 'test-unit',
         'dist-build',
-        // 'docs-dist-typedoc',
         // 'test-e2e',
         'dist-pack',
         // 'test-examples-lint',

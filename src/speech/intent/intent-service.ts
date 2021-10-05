@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * IntentService fuer die Integration von Listen in Angular
  *
  * API-Version: 1.1

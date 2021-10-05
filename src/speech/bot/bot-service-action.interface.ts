@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Public BotService Aktion Schnittstelle
  *
  * API-Version: 1.0

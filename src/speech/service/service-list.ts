@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Service-Liste zur Speicherung von Services
  *
  * Letzte Aenderung: 23.05.2019

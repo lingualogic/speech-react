@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * BotServiceOption Schnittstelle
  *
  * API-Version: 1.1

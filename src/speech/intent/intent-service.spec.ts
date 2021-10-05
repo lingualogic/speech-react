@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Unit-Test von IntentService
  *
  * Letzter Aenderung: 21.02.2019

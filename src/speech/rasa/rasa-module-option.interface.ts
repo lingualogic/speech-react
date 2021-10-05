@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * RasaModuleOption Schnittstelle
  *
  * API-Version: 1.1

@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Globale Konstanten fuer ActionService
  *
  * API-Version: 1.0

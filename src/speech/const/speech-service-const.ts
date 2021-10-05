@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * SpeechAngular Konstanten
  *
  * API-Version: 1.3

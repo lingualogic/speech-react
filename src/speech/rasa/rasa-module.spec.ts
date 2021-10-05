@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Unit-Test von RasaModule
  *
  * Letzter Aenderung: 11.07.2019

@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * IntentService Konfiguration, wird in IntentService im Konstruktor verwendet.
  * Werte koennen hier ueberschrieben werden.
  *

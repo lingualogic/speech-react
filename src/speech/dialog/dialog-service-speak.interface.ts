@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Public DialogService Speak Schnittstelle
  *
  * API-Version: 1.0

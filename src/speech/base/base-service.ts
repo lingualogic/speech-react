@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * BaseService als abstrakte Basisklasse aller Speech-Services zur Anbindung an Angular
  *
  * API-Version: 1.0

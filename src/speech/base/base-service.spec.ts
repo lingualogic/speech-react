@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Unit-Test von BaseService
  *
  * Letzter Aenderung: 23.01.2019

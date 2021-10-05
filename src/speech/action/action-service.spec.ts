@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Unit-Test von ActionService
  *
  * Letzter Aenderung: 23.01.2019

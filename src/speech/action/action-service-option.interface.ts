@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * ActionServiceOption Schnittstelle
  *
  * API-Version: 1.1

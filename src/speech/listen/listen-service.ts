@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * ListenService fuer die Integration von Listen in Angular
  *
  * API-Version: 1.3

@@ -1,4 +1,4 @@
-/**
+/**  @packageDocumentation
  * ActionService Konfiguration, wird in ActionService im Konstruktor verwendet.
  * Werte koennen hier ueberschrieben werden.
  *

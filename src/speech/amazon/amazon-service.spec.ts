@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Unit-Test von AmazonService
  *
  * Letzter Aenderung: 03.04.2019

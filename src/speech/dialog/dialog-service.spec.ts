@@ -1,4 +1,4 @@
-/**
+/** @packageDocumentation
  * Unit-Test von DialogService
  *
  * Letzte Aenderung: 26.03.2019
